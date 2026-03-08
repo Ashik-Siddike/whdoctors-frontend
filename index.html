@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Tailwind CSS v3 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { orange: '#F39C12', red: '#E74C3C', blue: '#5DADE2', dark: '#2C3E50', text: '#34495E' }
+          },
+          fontFamily: { sora: ['Sora', 'sans-serif'], inter: ['Inter', 'sans-serif'] },
+          backgroundImage: {
+            'grad-orange': 'linear-gradient(135deg,#F39C12,#E74C3C)',
+            'grad-blue': 'linear-gradient(135deg,#5DADE2,#3498DB)',
+          }
+        }
+      }
+    }
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>WH Doctors Study Lab Ltd. - Your Gateway to Global Education</title>
+  <meta name="description"
+    content="WH Doctors Study Lab Ltd. — Premier overseas education consultancy. Free counselling, visa support & PhD mentoring for Malaysia, UK, USA, Canada & Australia." />
+  <meta name="keywords"
+    content="WH Doctors, study abroad, overseas education, Malaysia university, PhD consultancy, visa support" />
+  <meta name="author" content="WH Doctors Study Lab Ltd." />
+
+  <!-- Favicon -->
+  <link rel="icon" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+
+  <!-- Fonts: Sora + Inter (matching demo.html) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Bootstrap (for modal only) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Our Custom CSS -->
+  <link rel="stylesheet" href="css/home-redesign.css" />
+</head>
+
+<body>
+
+  <!-- ===== TOP ACTION BAR (Book Session + Apply Now) ===== -->
+  <div class="wh-topbar">
+    <div class="wh-topbar-inner">
+      <div class="wh-topbar-left">
+        <span><i class="fas fa-map-marker-alt"></i> House 44, Road 11, Sector 13, Uttara, Dhaka-1230</span>
+        <a href="tel:+60195686867"><i class="fas fa-phone"></i> +60 19-568 6867</a>
+        <a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"></i> harun.sh96@gmail.com</a>
+      </div>
+      <div class="wh-topbar-right">
+        <!-- Social icons -->
+        <a href="https://www.facebook.com/harun.rashid.56884761" target="_blank" title="Facebook"><i
+            class="fab fa-facebook-f"></i></a>
+        <a href="https://web.wechat.com/uklccp" target="_blank" title="WeChat"><i class="fab fa-weixin"></i></a>
+        <a href="https://wa.me/60195686867" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://x.com/harunra15855182" target="_blank" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA" target="_blank" title="YouTube"><i
+            class="fab fa-youtube"></i></a>
+        <!-- CTA Buttons in topbar -->
+        <div class="wh-topbar-cta">
+          <a href="appointment.html" class="btn-top-outline"><i class="fas fa-calendar-check"></i> Book Session</a>
+          <a href="contact.html" class="btn-top-primary"><i class="fas fa-paper-plane"></i> Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== STICKY BOTTOM NAVBAR (Logo Center + Nav Links on sides) ===== -->
+  <nav class="wh-bottom-nav" id="bottomNav">
+
+    <!-- LEFT LINKS -->
+    <a href="index.html" class="bottom-nav-link active">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="about.html" class="bottom-nav-link">
+      <i class="fas fa-info-circle"></i>
+      <span>About</span>
+    </a>
+    <a href="study-abroad.html" class="bottom-nav-link">
+      <i class="fas fa-graduation-cap"></i>
+      <span>Study Abroad</span>
+    </a>
+
+    <!-- CENTER LOGO -->
+    <a href="index.html" class="bottom-nav-logo">
+      <div class="bnl-img-wrap">
+        <img src="images/wh logo@4x-600w.png" alt="WH Doctors" />
+      </div>
+    </a>
+
+    <!-- RIGHT LINKS -->
+    <a href="services.html" class="bottom-nav-link">
+      <i class="fas fa-cogs"></i>
+      <span>Services</span>
+    </a>
+    <a href="conference.html" class="bottom-nav-link">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <span>Conference</span>
+    </a>
+    <a href="contact.html" class="bottom-nav-link">
+      <i class="fas fa-envelope"></i>
+      <span>Contact</span>
+    </a>
+
+  </nav>
+
+
+
+  <!-- ===== HERO SECTION ===== -->
+
+  <section class="wh-hero" id="home">
+    <div class="wh-hero-container">
+      <div class="wh-hero-content">
+        <div class="pill-badge"><i class="fas fa-star"></i> #1 Overseas Education Consultancy</div>
+        <h2>Your Gateway to <span class="highlight animated-grad"
+            style="-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Global
+            Education Excellence</span></h2>
+        <p>Transform your academic dreams into reality with expert guidance for studying in Malaysia, UK, USA, Canada,
+          and Australia. We provide <strong>100% FREE consultancy</strong>, personalized support, and comprehensive visa
+          assistance to ensure your success.</p>
+        <div class="flex flex-wrap gap-3 mb-6">
+          <span
+            class="inline-flex items-center gap-2 bg-white/80 text-sm font-semibold px-4 py-2 rounded-full shadow-sm text-gray-700"><i
+              class="fas fa-check-circle" style="color:#F39C12"></i> 100% Free Service</span>
+          <span
+            class="inline-flex items-center gap-2 bg-white/80 text-sm font-semibold px-4 py-2 rounded-full shadow-sm text-gray-700"><i
+              class="fas fa-check-circle" style="color:#F39C12"></i> 95% Visa Success</span>
+          <span
+            class="inline-flex items-center gap-2 bg-white/80 text-sm font-semibold px-4 py-2 rounded-full shadow-sm text-gray-700"><i
+              class="fas fa-check-circle" style="color:#F39C12"></i> 200+ Universities</span>
+        </div>
+        <div class="wh-hero-btns">
+          <a href="contact.html" class="btn-primary-demo">Get Free Consultation</a>
+          <a href="services.html" class="btn-secondary-demo">Explore Services</a>
+        </div>
+      </div>
+      <div class="wh-hero-visual">
+        <div class="wh-hero-img-frame" style="position:relative;">
+          <img src="uploads/1745679712.jpg" alt="International Students — WH Doctors Study Lab"
+            onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80'" />
+          <div class="wh-hero-img-overlay">
+            <h3>5,000+ Students Successfully Placed</h3>
+          </div>
+          <div class="hero-badge">
+            <div class="badge-icon">🎓</div>
+            <div>
+              <strong>200+</strong>
+              <span>Partner Universities</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== UNIVERSITY MARQUEE BANNER ===== -->
+  <section class="wh-university-banner">
+    <h3>Our Prestigious Partner Universities</h3>
+    <div class="banner-track-wrap">
+      <div class="banner-track">
+        <!-- Group 1 -->
+        <div class="banner-group">
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20251213131403.png"
+                alt="University Malaya" /></div>
+            <div class="uni-name">University Malaya (UM)</div>
+            <div class="uni-rank">#1 in Malaysia</div>
+          </div>
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20231211021927.png" alt="UKM" /></div>
+            <div class="uni-name">Universiti Kebangsaan Malaysia</div>
+            <div class="uni-rank">#2 in Malaysia</div>
+          </div>
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20231211023209.png" alt="IIUM" /></div>
+            <div class="uni-name">International Islamic University</div>
+            <div class="uni-rank">Top Islamic University</div>
+          </div>
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20251213133215.png" alt="Taylor's" /></div>
+            <div class="uni-name">Taylor's University</div>
+            <div class="uni-rank">#1 Private University Asia</div>
+          </div>
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20251213132112.png" alt="USM" /></div>
+            <div class="uni-name">University Sains Malaysia</div>
+            <div class="uni-rank">Top 2% Globally</div>
+          </div>
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20251213133001.png" alt="UPM" /></div>
+            <div class="uni-name">University Putra Malaysia</div>
+            <div class="uni-rank">#4 in Malaysia</div>
+          </div>
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20251213132748.png" alt="Partner" /></div>
+            <div class="uni-name">Putra Business School</div>
+            <div class="uni-rank">#1 Business School</div>
+          </div>
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20251213132449.png" alt="Partner" /></div>
+            <div class="uni-name">Monash University Malaysia</div>
+            <div class="uni-rank">World Top 50</div>
+          </div>
+        </div>
+        <!-- Group 2 (duplicate for seamless loop) -->
+        <div class="banner-group">
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20251213131403.png"
+                alt="University Malaya" /></div>
+            <div class="uni-name">University Malaya (UM)</div>
+            <div class="uni-rank">#1 in Malaysia</div>
+          </div>
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20231211021927.png" alt="UKM" /></div>
+            <div class="uni-name">Universiti Kebangsaan Malaysia</div>
+            <div class="uni-rank">#2 in Malaysia</div>
+          </div>
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20231211023209.png" alt="IIUM" /></div>
+            <div class="uni-name">International Islamic University</div>
+            <div class="uni-rank">Top Islamic University</div>
+          </div>
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20251213133215.png" alt="Taylor's" /></div>
+            <div class="uni-name">Taylor's University</div>
+            <div class="uni-rank">#1 Private University Asia</div>
+          </div>
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20251213132112.png" alt="USM" /></div>
+            <div class="uni-name">University Sains Malaysia</div>
+            <div class="uni-rank">Top 2% Globally</div>
+          </div>
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20251213133001.png" alt="UPM" /></div>
+            <div class="uni-name">University Putra Malaysia</div>
+            <div class="uni-rank">#4 in Malaysia</div>
+          </div>
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20251213132748.png" alt="Partner" /></div>
+            <div class="uni-name">Putra Business School</div>
+            <div class="uni-rank">#1 Business School</div>
+          </div>
+          <div class="uni-item">
+            <div class="uni-logo-box"><img src="upload/university-image/logo/20251213132449.png" alt="Partner" /></div>
+            <div class="uni-name">Monash University Malaysia</div>
+            <div class="uni-rank">World Top 50</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS SECTION ===== -->
+  <section class="wh-stats">
+    <div class="wh-stats-container">
+      <div class="stat-box card-lift reveal">
+        <div style="font-size:36px;margin-bottom:10px;">🎓</div>
+        <div class="stat-number">200+</div>
+        <div class="stat-label">Partner Universities</div>
+      </div>
+      <div class="stat-box card-lift reveal">
+        <div style="font-size:36px;margin-bottom:10px;">👨‍🎓</div>
+        <div class="stat-number">5000+</div>
+        <div class="stat-label">Students Placed</div>
+      </div>
+      <div class="stat-box card-lift reveal">
+        <div style="font-size:36px;margin-bottom:10px;">🌍</div>
+        <div class="stat-number">8</div>
+        <div class="stat-label">Global Offices</div>
+      </div>
+      <div class="stat-box card-lift reveal">
+        <div style="font-size:36px;margin-bottom:10px;">✅</div>
+        <div class="stat-number">95%</div>
+        <div class="stat-label">Visa Success Rate</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STUDENT PROFILE ANALYSIS SECTION ===== -->
+  <section class="wh-analysis" id="analysis">
+    <div class="analysis-grid">
+      <div class="analysis-left reveal">
+        <h2>Get Your Personalized Study Analysis</h2>
+        <p>Discover the best universities and programs tailored to your academic profile, career goals, and budget. Our
+          expert consultants analyze your credentials and provide customized recommendations — completely free.</p>
+        <div class="analysis-features">
+          <div class="analysis-feat">
+            <h4>📊 Profile Assessment</h4>
+            <p>Comprehensive evaluation of your academic background and potential</p>
+          </div>
+          <div class="analysis-feat">
+            <h4>🎯 University Matching</h4>
+            <p>Best-fit institutions based on your unique profile and aspirations</p>
+          </div>
+          <div class="analysis-feat">
+            <h4>💰 Cost Analysis</h4>
+            <p>Detailed breakdown of tuition fees and living expenses</p>
+          </div>
+          <div class="analysis-feat">
+            <h4>📈 Career Prospects</h4>
+            <p>Post-study opportunities and potential career pathways</p>
+          </div>
+        </div>
+      </div>
+      <div class="analysis-form-card reveal">
+        <h3>Request Free Analysis</h3>
+        <form id="analysisForm" action="message/store" method="POST">
+          <input type="hidden" name="_token" value="" />
+          <div class="form-row">
+            <label>Full Name *</label>
+            <input type="text" name="name" placeholder="Enter your full name" required />
+          </div>
+          <div class="form-row">
+            <label>Email Address *</label>
+            <input type="email" name="email" placeholder="your.email@example.com" required />
+          </div>
+          <div class="form-row">
+            <label>Phone / WhatsApp *</label>
+            <input type="tel" name="phone" placeholder="+60 19-568 6867" required />
+          </div>
+          <div class="form-row">
+            <label>Current Education Level *</label>
+            <select name="education" required>
+              <option value="">Select your level</option>
+              <option value="high-school">High School / A-Levels</option>
+              <option value="bachelor">Bachelor's Degree</option>
+              <option value="master">Master's Degree</option>
+              <option value="phd">PhD / Doctorate</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Preferred Study Destination *</label>
+            <select name="destination" required>
+              <option value="">Select destination</option>
+              <option value="malaysia">Malaysia</option>
+              <option value="uk">United Kingdom</option>
+              <option value="usa">USA</option>
+              <option value="canada">Canada</option>
+              <option value="australia">Australia</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label>Your Message</label>
+            <textarea name="message" placeholder="Tell us about your goals..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit-demo">Get Free Analysis Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="wh-services" id="services">
+    <div class="wh-cont">
+      <div class="sec-head reveal">
+        <div class="pill-badge"><i class="fas fa-cogs"></i> What We Offer</div>
+        <h2 class="sec-title">Our Comprehensive <span>Services</span></h2>
+        <p class="sec-sub">End-to-end support for your international education journey — from application to graduation,
+          completely free.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card-demo reveal">
+          <div class="s-icon">🎓</div>
+          <h3>Education Counselling</h3>
+          <p>Personalised guidance for Bachelor's, Master's, and PhD programs. We match your academic profile with the
+            right university and course.</p>
+        </div>
+        <div class="service-card-demo reveal">
+          <div class="s-icon">🔬</div>
+          <h3>PhD &amp; Research Mentoring</h3>
+          <p>Expert support for research proposals, PhD supervisor matching, and continuous academic guidance throughout
+            your doctoral journey.</p>
+        </div>
+        <div class="service-card-demo reveal">
+          <div class="s-icon">📋</div>
+          <h3>Free Admission Services</h3>
+          <p>We turn your study-abroad goals into reality — from university selection to securing your official
+            acceptance letter.</p>
+        </div>
+        <div class="service-card-demo reveal">
+          <div class="s-icon">✈️</div>
+          <h3>Visa Processing</h3>
+          <p>Full visa documentation, embassy interview preparation, and up-to-date immigration policy guidance — zero
+            fees, only results.</p>
+        </div>
+        <div class="service-card-demo reveal">
+          <div class="s-icon">🏠</div>
+          <h3>Accommodation Assistance</h3>
+          <p>We help you find safe, affordable, and comfortable student housing near your campus for a smooth transition
+            abroad.</p>
+        </div>
+        <div class="service-card-demo reveal">
+          <div class="s-icon">🌐</div>
+          <h3>Global Network Access</h3>
+          <p>Connect with our worldwide network of 200+ universities, leading researchers, and alumni across 7+
+            countries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / VISUAL SECTION ===== -->
+  <section class="wh-about" id="about">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img src="images/wh logo@4x-600w.png" alt="WH Doctors Study Lab"
+          style="object-fit:contain; background:linear-gradient(135deg,#FFF5E6,#FFE8E8); padding:40px;" />
+        <div class="about-experience-badge">
+          <strong>10+</strong>
+          <span>Years of<br>Excellence</span>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <div class="pill-badge"><i class="fas fa-info-circle"></i> About Us</div>
+        <h2>Welcome to WH Doctors <span
+            style="background:linear-gradient(135deg,#F39C12,#E74C3C);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Study
+            Lab Ltd.</span></h2>
+        <p>Your Trusted Gateway to Global Education &amp; Research Success. A premier overseas education consultancy
+          dedicated to empowering students and researchers from around the world — with zero fees and maximum
+          dedication.</p>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-item-icon">🎯</div>
+            <div class="feature-item-text">
+              <h4>Free Education Counselling</h4>
+              <p>Honest, up-to-date guidance tailored to your journey — always free of charge.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item-icon">🔬</div>
+            <div class="feature-item-text">
+              <h4>PhD &amp; Research Mentoring</h4>
+              <p>Expert support for selecting supervisors, crafting proposals, and PhD applications globally.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item-icon">🌍</div>
+            <div class="feature-item-text">
+              <h4>Global Network in 7+ Countries</h4>
+              <p>Active offices in Malaysia, Bangladesh, China, UK, and more with dedicated local teams.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item-icon">💸</div>
+            <div class="feature-item-text">
+              <h4>100% Free University Applications</h4>
+              <p>Zero fees, zero stress — we handle everything from application to visa to arrival.</p>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="btn-primary-demo"
+          style="margin-top:28px; display:inline-flex; align-items:center; gap:8px;">
+          <i class="fas fa-arrow-right"></i> Discover More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STUDY DESTINATIONS ===== -->
+  <section class="wh-countries" id="destinations">
+    <div class="wh-cont">
+      <div class="sec-head reveal">
+        <div class="pill-badge"><i class="fas fa-plane"></i> Study Abroad</div>
+        <h2 class="sec-title">Choose Your Dream <span>Destination</span></h2>
+        <p class="sec-sub">We operate across 5+ countries with dedicated local teams to help you succeed
+          internationally.</p>
+      </div>
+      <div class="countries-grid">
+        <a href="study-abroad.html" class="country-card-demo reveal">
+          <div class="country-flag-wrap">
+            <img src="images/malaysia1-200h.png" alt="Malaysia" onerror="this.parentElement.innerHTML='🇲🇾'" />
+          </div>
+          <h4>Malaysia</h4>
+          <span class="country-count">200+ Partner Universities</span>
+        </a>
+        <a href="study-abroad.html" class="country-card-demo reveal">
+          <div class="country-flag-wrap">
+            <img src="images/great britain1-200h.png" alt="United Kingdom"
+              onerror="this.parentElement.innerHTML='🇬🇧'" />
+          </div>
+          <h4>United Kingdom</h4>
+          <span class="country-count">World-Class Programs</span>
+        </a>
+        <a href="study-abroad.html" class="country-card-demo reveal">
+          <div class="country-flag-wrap">
+            <img src="images/usa1-200h.png" alt="USA" onerror="this.parentElement.innerHTML='🇺🇸'" />
+          </div>
+          <h4>USA</h4>
+          <span class="country-count">Ivy League &amp; Top State</span>
+        </a>
+        <a href="study-abroad.html" class="country-card-demo reveal">
+          <div class="country-flag-wrap">
+            <img src="images/canada1-200h.png" alt="Canada" onerror="this.parentElement.innerHTML='🇨🇦'" />
+          </div>
+          <h4>Canada</h4>
+          <span class="country-count">Top Research Institutes</span>
+        </a>
+        <a href="study-abroad.html" class="country-card-demo reveal">
+          <div class="country-flag-wrap">
+            <img src="images/australia1-200h.png" alt="Australia" onerror="this.parentElement.innerHTML='🇦🇺'" />
+          </div>
+          <h4>Australia</h4>
+          <span class="country-count">Go8 Universities</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="wh-why" id="whyus">
+    <div class="wh-cont">
+      <div class="sec-head reveal">
+        <div class="pill-badge"><i class="fas fa-award"></i> Why Us</div>
+        <h2 class="sec-title">Why Choose <span>WH Doctors?</span></h2>
+        <p class="sec-sub">Free consulting, 5+ countries, fast response, no hidden charges — everything you need for a
+          successful study abroad journey.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-box reveal">
+          <div class="why-icon">📊</div>
+          <h4>95% Visa Success Rate</h4>
+          <p>Thorough documentation and expert preparation results in exceptional visa approval rates for our students.
+          </p>
+        </div>
+        <div class="why-box reveal">
+          <div class="why-icon">🌍</div>
+          <h4>Located in 5+ Countries</h4>
+          <p>Service offices in Malaysia, Bangladesh, China, UK and more — face-to-face support wherever you are.</p>
+        </div>
+        <div class="why-box reveal">
+          <div class="why-icon">🏛️</div>
+          <h4>200+ Partner Universities</h4>
+          <p>Accredited partnerships with world-leading universities ensures the best academic options for your future.
+          </p>
+        </div>
+        <div class="why-box reveal">
+          <div class="why-icon">🔄</div>
+          <h4>End-to-End Support</h4>
+          <p>From initial counselling to post-arrival assistance — we are with you at every step of your academic
+            journey.</p>
+        </div>
+        <div class="why-box reveal">
+          <div class="why-icon">💸</div>
+          <h4>100% Free of Charge</h4>
+          <p>All our services — counselling, applications, visa processing — are completely free for every student.</p>
+        </div>
+        <div class="why-box reveal">
+          <div class="why-icon">🎓</div>
+          <h4>PhD-Qualified Experts</h4>
+          <p>Our passionate team includes PhD holders and global academicians who provide genuine, experienced guidance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEAM SECTION ===== -->
+  <section class="wh-team" id="team">
+    <div class="wh-cont">
+      <div class="sec-head reveal">
+        <div class="pill-badge"><i class="fas fa-users"></i> Our Team</div>
+        <h2 class="sec-title">Meet Our <span>Expert Team</span></h2>
+        <p class="sec-sub">PhD-qualified professionals dedicated to your academic success.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card-demo reveal">
+          <img src="upload/user-image/20250430171309.jpg" alt="Dr. Harun Rashid"
+            onerror="this.src='images/avatar-3637561_1280.png'" />
+          <h3>Dr. Harun Rashid</h3>
+          <span>Managing Director</span>
+        </div>
+        <div class="team-card-demo reveal">
+          <img src="upload/user-image/20250430172201.jpg" alt="Dr. Mohsin Uddin"
+            onerror="this.src='images/avatar-3637561_1280.png'" />
+          <h3>Dr. Mohsin Uddin</h3>
+          <span>Chairman</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="wh-testimonials" id="testimonials">
+    <div class="wh-cont">
+      <div class="sec-head reveal">
+        <div class="pill-badge"><i class="fas fa-quote-left"></i> Testimonials</div>
+        <h2 class="sec-title">What Our <span>Students Say</span></h2>
+        <p class="sec-sub">Real stories from real students who achieved their study abroad dreams with WH Doctors.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testi-card reveal">
+          <div class="big-quote">"</div>
+          <p class="testi-text">WH Doctors Study Lab made my dream of studying in Malaysia a reality. Their free
+            counselling and visa support was exceptional — I couldn't have done it without their team!</p>
+          <div class="testi-author">
+            <img class="testi-avatar" src="upload/client-review/20251111152352.jpg" alt="MD Rafiun Islam"
+              onerror="this.src='images/avatar-3637561_1280.png'" />
+            <div class="testi-info">
+              <strong>MD Rafiun Islam</strong>
+              <span>Software Developer, Bangladesh</span>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="big-quote">"</div>
+          <p class="testi-text">The PhD mentoring service completely transformed my research proposal. My supervisor
+            matching was perfect and I got into my dream university with a scholarship!</p>
+          <div class="testi-author">
+            <img class="testi-avatar" src="upload/client-review/20231228124056.jpg" alt="Jane Doe"
+              onerror="this.src='images/avatar-3637561_1280.png'" />
+            <div class="testi-info">
+              <strong>Jane Doe</strong>
+              <span>PhD Student, University Malaya</span>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="big-quote">"</div>
+          <p class="testi-text">From the initial consultation to landing in Kuala Lumpur — WH Doctors handled everything
+            professionally. Their 100% free service is truly remarkable and life-changing.</p>
+          <div class="testi-author">
+            <img class="testi-avatar" src="upload/client-review/20231228123836.jpg" alt="John Doe"
+              onerror="this.src='images/avatar-3637561_1280.png'" />
+            <div class="testi-info">
+              <strong>John Doe</strong>
+              <span>MSc Graduate, Taylor's University</span>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOG / NEWS ===== -->
+  <section class="wh-blog" id="blog">
+    <div class="wh-cont">
+      <div class="sec-head reveal"
+        style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; text-align:left; margin-bottom:50px;">
+        <div>
+          <div class="pill-badge"><i class="fas fa-newspaper"></i> Latest Updates</div>
+          <h2 class="sec-title" style="margin-bottom:0;">Blog &amp; <span>News</span></h2>
+        </div>
+        <a href="blog" class="btn-secondary-demo" style="font-size:14px; padding:12px 30px;">View All Posts</a>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card-demo reveal">
+          <a href="blog/details/13">
+            <img src="upload/blog/20251213130854.jpeg" alt="Blog Post"
+              onerror="this.style.background='#f8f9fa';this.style.height='200px';" />
+            <div class="blog-body">
+              <span class="blog-cat">Scholarship</span>
+              <h3>Study Opportunities in Malaysian Universities 2025</h3>
+              <div class="blog-date"><i class="fas fa-calendar-alt"></i> 09 Feb, 2025</div>
+            </div>
+          </a>
+        </div>
+        <div class="blog-card-demo reveal">
+          <a href="blog/details/11">
+            <img src="upload/blog/20250208064549.jpeg" alt="Blog Post"
+              onerror="this.style.background='#f8f9fa';this.style.height='200px';" />
+            <div class="blog-body">
+              <span class="blog-cat">Financial Aid</span>
+              <h3>50% Scholarship Available — Apply Before Deadline</h3>
+              <div class="blog-date"><i class="fas fa-calendar-alt"></i> 20 May, 2024</div>
+            </div>
+          </a>
+        </div>
+        <div class="blog-card-demo reveal">
+          <a href="blog/details/7">
+            <img src="upload/blog/20250208064524.jpg" alt="Blog Post"
+              onerror="this.style.background='#f8f9fa';this.style.height='200px';" />
+            <div class="blog-body">
+              <span class="blog-cat">University Guide</span>
+              <h3>Current Top Universities in Malaysia — 2024 Rankings</h3>
+              <div class="blog-date"><i class="fas fa-calendar-alt"></i> 08 Jan, 2024</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="wh-contact" id="contact">
+    <div class="wh-cont">
+      <div class="contact-grid">
+        <!-- Left: info -->
+        <div class="reveal">
+          <div class="pill-badge"><i class="fas fa-envelope"></i> Get In Touch</div>
+          <h2 class="contact-info">Let's Start<br />Your Journey Today</h2>
+          <p style="font-size:16px; color:#34495E; margin-bottom:36px; line-height:1.7;">Fill up the form and our team
+            will get back to you within 24 hours. All consultations are completely free.</p>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-item-text">
+              <strong>Phone / WhatsApp</strong>
+              <a href="tel:+60195686867">+60 19-568 6867</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-item-text">
+              <strong>Email</strong>
+              <a href="mailto:harun.sh96@gmail.com">harun.sh96@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-item-text">
+              <strong>Head Office — Malaysia</strong>
+              <span>Perdana Selatan, Block A, Serdang, Selangor, KL 43300</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><i class="fas fa-clock"></i></div>
+            <div class="contact-item-text">
+              <strong>Working Hours</strong>
+              <span>Sunday – Thursday, 9am – 5pm</span>
+            </div>
+          </div>
+          <div class="contact-social">
+            <a href="https://www.facebook.com/harun.rashid.56884761" target="_blank" title="Facebook"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/60195686867" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://web.wechat.com/uklccp" target="_blank" title="WeChat"><i class="fab fa-weixin"></i></a>
+            <a href="https://x.com/harunra15855182" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA" target="_blank" title="YouTube"><i
+                class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Right: Form -->
+        <div class="contact-form-card reveal">
+          <h3>Send Us a Message</h3>
+          <p>Our team will contact you within 24 hours!</p>
+          <form id="contactForm" action="message/store" method="POST">
+            <input type="hidden" name="_token" value="" />
+            <div class="form-row">
+              <label>Full Name</label>
+              <input type="text" name="name" id="contact_name" placeholder="Enter your full name" required />
+            </div>
+            <div class="form-row">
+              <label>Phone / WhatsApp</label>
+              <input type="tel" name="phone" id="contact_phone" placeholder="Your phone number" required />
+            </div>
+            <div class="form-row">
+              <label>Email Address</label>
+              <input type="email" name="email" id="contact_email" placeholder="Your email address" />
+            </div>
+            <div class="form-row">
+              <label>Your Message</label>
+              <textarea name="message" id="contact_message" placeholder="How can we help you?"></textarea>
+            </div>
+            <button type="submit" class="btn-submit-demo">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OFFICES ===== -->
+  <section class="wh-offices">
+    <div class="wh-cont">
+      <div class="sec-head reveal">
+        <div class="pill-badge"><i class="fas fa-map-marker-alt"></i> Our Offices</div>
+        <h2 class="sec-title">Global <span>Presence</span></h2>
+        <p class="sec-sub">We have dedicated offices across the globe to serve international students better.</p>
+      </div>
+      <div class="offices-grid">
+        <div class="office-card-demo reveal">
+          <div class="o-flag">🇲🇾</div>
+          <h3>Malaysia Office</h3>
+          <ul class="office-info-list">
+            <li><i class="fas fa-map-marker-alt"></i> Perdana Selatan, Block A, Serdang, Selangor, KL 43300</li>
+            <li><i class="fas fa-phone"></i> +60 19-568 6867</li>
+            <li><i class="fas fa-envelope"></i> whdoctors@gmail.com</li>
+            <li><i class="fas fa-clock"></i> Sun – Thu, 9am – 5pm</li>
+          </ul>
+        </div>
+        <div class="office-card-demo reveal">
+          <div class="o-flag">🇧🇩</div>
+          <h3>Bangladesh Head Office</h3>
+          <ul class="office-info-list">
+            <li><i class="fas fa-map-marker-alt"></i> House 44, Road 11, Sector 13, Uttara, Dhaka-1230</li>
+            <li><i class="fas fa-phone"></i> +60 19-568 6867</li>
+            <li><i class="fas fa-envelope"></i> harun.sh96@gmail.com</li>
+            <li><i class="fas fa-clock"></i> Sun – Thu, 9am – 5pm</li>
+          </ul>
+        </div>
+        <div class="office-card-demo reveal">
+          <div class="o-flag">🇨🇳</div>
+          <h3>China Office</h3>
+          <ul class="office-info-list">
+            <li><i class="fas fa-map-marker-alt"></i> Anhui Province, China</li>
+            <li><i class="fas fa-phone"></i> +60 19-568 6867</li>
+            <li><i class="fas fa-envelope"></i> whdoctors@gmail.com</li>
+            <li><i class="fas fa-clock"></i> Mon – Fri, 9am – 6pm</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="wh-cta-banner">
+    <div class="wh-cta-inner">
+      <h2>Ready to Start Your Global Education Journey?</h2>
+      <p>Join thousands of students who trusted WH Doctors Study Lab for their study abroad dreams. Book a FREE session
+        today — no fees, no commitments!</p>
+      <div class="cta-btns">
+        <a href="contact.html" class="btn-cta-white"><i class="fas fa-calendar-check"></i> Book Free Consultation</a>
+        <a href="tel:+60195686867" class="btn-cta-outline"><i class="fas fa-phone"></i> Call Us Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="wh-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="fb-logo">
+          <img src="images/logo white@4x.png" alt="WH Doctors Study Lab" />
+        </div>
+        <p>WH Doctors Study Lab Ltd. — Your trusted gateway to global education. Free counselling, visa support & PhD
+          mentoring for students worldwide.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/harun.rashid.56884761" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/60195686867" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://web.wechat.com/uklccp" target="_blank"><i class="fab fa-weixin"></i></a>
+          <a href="https://x.com/harunra15855182" target="_blank"><i class="fab fa-x-twitter"></i></a>
+          <a href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA" target="_blank"><i
+              class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="study-abroad.html">Study Abroad</a></li>
+          <li><a href="blog.html">Blog & News</a></li>
+          <li><a href="abroad.html">Life Abroad</a></li>
+          <li><a href="conference.html">Conference</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Study Destinations</h4>
+        <ul>
+          <li><a href="study-abroad.html">🇲🇾 Malaysia</a></li>
+          <li><a href="study-abroad.html">🇬🇧 United Kingdom</a></li>
+          <li><a href="study-abroad.html">🇺🇸 USA</a></li>
+          <li><a href="study-abroad.html">🇨🇦 Canada</a></li>
+          <li><a href="study-abroad.html">🇦🇺 Australia</a></li>
+          <li><a href="study-abroad.html">🇪🇺 Europe</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><a href="tel:+60195686867"><i class="fas fa-phone" style="color:#F39C12; margin-right:6px;"></i>+60 19-568
+              6867</a></li>
+          <li><a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"
+                style="color:#F39C12; margin-right:6px;"></i>harun.sh96@gmail.com</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt" style="color:#F39C12; margin-right:6px;"></i>Uttara, Dhaka,
+              Bangladesh</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt" style="color:#F39C12; margin-right:6px;"></i>Serdang,
+              Selangor, Malaysia</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 WH Doctors Study Lab Ltd. All rights reserved. | Designed by Ashik</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/60195686867" target="_blank" class="float-wa" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Subscribe Modal -->
+  <div class="modal fade" id="emailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="border-radius:20px; overflow:hidden; border:none;">
+        <div class="modal-header border-0 position-absolute end-0 p-2" style="z-index:1;">
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div style="padding:46px; text-align:center;">
+          <div
+            style="width:64px;height:64px;background:linear-gradient(135deg,#F39C12,#E74C3C);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:26px;color:#fff;">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h2 style="font-family:'Sora',sans-serif;font-size:22px;font-weight:900;color:#2C3E50;margin-bottom:8px;">Stay
+            Updated!</h2>
+          <p style="color:#34495E;font-size:14px;margin-bottom:24px;">Subscribe to get the latest scholarships, study
+            tips, and opportunities from WH Doctors.</p>
+          <form action="subscribe" method="POST" style="display:flex;gap:10px;flex-wrap:wrap;">
+            <input type="email" name="email" placeholder="Your Email Address" required
+              style="flex:1;padding:13px 18px;border-radius:50px;border:2px solid #ECF0F1;font-size:14px;min-width:180px;outline:none;font-family:'Inter',sans-serif;" />
+            <button type="submit"
+              style="background:linear-gradient(135deg,#F39C12,#E74C3C);color:#fff;border:none;padding:13px 28px;border-radius:50px;font-weight:700;font-size:14px;cursor:pointer;font-family:'Inter',sans-serif;">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    // ---- Navbar scroll ----
+    const header = document.getElementById('mainHeader');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ---- Hamburger ----
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburgerBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      const spans = hamburgerBtn.querySelectorAll('span');
+      if (mobileMenu.classList.contains('open')) {
+        spans[0].style.transform = 'rotate(45deg) translate(5px,5px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
+      } else {
+        spans[0].style.transform = ''; spans[1].style.opacity = ''; spans[2].style.transform = '';
+      }
+    });
+
+    // ---- Reveal Scroll Animation ----
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 60);
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
+    // Immediately reveal elements already in viewport on load
+    setTimeout(() => {
+      revealEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          el.classList.add('visible');
+        }
+      });
+    }, 100);
+
+    // ---- Contact Form ----
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+        btn.style.background = 'linear-gradient(135deg, #27AE60, #229954)';
+        setTimeout(() => this.submit(), 1000);
+      }, 1200);
+    });
+
+    // ---- Analysis Form submit ----
+    document.getElementById('analysisForm') && document.getElementById('analysisForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-check"></i> Request Sent!';
+        setTimeout(() => this.submit(), 1000);
+      }, 1200);
+    });
+
+    // ---- Subscribe Modal (after 3s) ----
+    $(document).ready(function () {
+      setTimeout(function () { $('#emailModal').modal('show'); }, 3000);
+      $('#emailModal form').submit(function (e) {
+        e.preventDefault();
+        $.post($(this).attr('action'), $(this).serialize(), function () {
+          $('#emailModal .modal-content').html(`
+          <div style="padding:46px;text-align:center;">
+            <div style="font-size:52px;margin-bottom:16px;">🎉</div>
+            <h3 style="font-family:'Sora',sans-serif;font-weight:900;color:#2C3E50;">Thank you!</h3>
+            <p style="color:#34495E;">You\'ll receive the latest updates from WH Doctors Study Lab.</p>
+          </div>`);
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

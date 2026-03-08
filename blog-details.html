@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { orange: '#F39C12', red: '#E74C3C', blue: '#5DADE2', dark: '#2C3E50', text: '#34495E' }
+                    },
+                    fontFamily: { sora: ['Sora', 'sans-serif'], inter: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Details - WH Doctors Study Lab Ltd.</title>
+    <meta name="description"
+        content="Read detailed blog posts and articles from WH Doctors Study Lab on overseas education, scholarships, and visa success." />
+    <link rel="icon" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/home-redesign.css" />
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #2C3E50 0%, #E74C3C 100%);
+            padding: 100px 20px 60px;
+            text-align: center;
+            color: white;
+        }
+
+        .page-hero h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            font-weight: 900;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .page-hero .date-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            margin-top: 10px;
+        }
+
+        /* Blog Layout */
+        .blog-detail-section {
+            padding: 60px 20px 100px;
+            background: #f8f9fa;
+        }
+
+        .blog-detail-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 40px;
+        }
+
+        @media (max-width: 900px) {
+            .blog-detail-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Main Content */
+        .blog-article {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+        }
+
+        .blog-article img.hero-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 14px;
+            margin-bottom: 30px;
+        }
+
+        .blog-article h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #2C3E50;
+            margin-bottom: 14px;
+        }
+
+        .blog-article p {
+            color: #555;
+            line-height: 1.85;
+            margin-bottom: 18px;
+            font-size: 1rem;
+        }
+
+        .blog-article h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #2C3E50;
+            margin: 28px 0 12px;
+        }
+
+        .blog-article ul {
+            padding-left: 20px;
+            margin-bottom: 18px;
+        }
+
+        .blog-article ul li {
+            color: #555;
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 28px;
+            flex-wrap: wrap;
+        }
+
+        .blog-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .blog-meta .tag {
+            background: linear-gradient(135deg, #F39C12, #E74C3C);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #E74C3C;
+            font-weight: 700;
+            text-decoration: none;
+            margin-bottom: 28px;
+            font-size: 0.9rem;
+            transition: gap 0.2s;
+        }
+
+        .back-to-blog:hover {
+            gap: 12px;
+        }
+
+        /* Sidebar */
+        .blog-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .sidebar-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .sidebar-card h4 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #2C3E50;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .latest-blog-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            align-items: flex-start;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .latest-blog-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .lbi-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #F39C12, #E74C3C);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+            color: white;
+        }
+
+        .lbi-text h5 {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: #2C3E50;
+            line-height: 1.3;
+            margin-bottom: 4px;
+        }
+
+        .lbi-text span {
+            font-size: 0.78rem;
+            color: #aaa;
+        }
+
+        .latest-blog-item:hover .lbi-text h5 {
+            color: #E74C3C;
+        }
+
+        /* CTA Sidebar */
+        .cta-sidebar {
+            background: linear-gradient(135deg, #2C3E50, #E74C3C);
+            border-radius: 16px;
+            padding: 28px;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-sidebar h4 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+
+        .cta-sidebar p {
+            font-size: 0.88rem;
+            opacity: 0.85;
+            margin-bottom: 18px;
+        }
+
+        .cta-sidebar a {
+            display: block;
+            background: white;
+            color: #E74C3C;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .cta-sidebar a:hover {
+            transform: scale(1.04);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== TOP ACTION BAR ===== -->
+    <div class="wh-topbar">
+        <div class="wh-topbar-inner">
+            <div class="wh-topbar-left">
+                <span><i class="fas fa-map-marker-alt"></i> House 44, Road 11, Sector 13, Uttara, Dhaka-1230</span>
+                <a href="tel:+60195686867"><i class="fas fa-phone"></i> +60 19-568 6867</a>
+                <a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"></i> harun.sh96@gmail.com</a>
+            </div>
+            <div class="wh-topbar-right">
+                <a href="https://www.facebook.com/harun.rashid.56884761" target="_blank" title="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://web.wechat.com/uklccp" target="_blank" title="WeChat"><i class="fab fa-weixin"></i></a>
+                <a href="https://wa.me/60195686867" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://x.com/harunra15855182" target="_blank" title="Twitter/X"><i
+                        class="fab fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA" target="_blank" title="YouTube"><i
+                        class="fab fa-youtube"></i></a>
+                <div class="wh-topbar-cta">
+                    <a href="appointment.html" class="btn-top-outline"><i class="fas fa-calendar-check"></i> Book
+                        Session</a>
+                    <a href="contact.html" class="btn-top-primary"><i class="fas fa-paper-plane"></i> Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== STICKY BOTTOM NAVBAR ===== -->
+    <nav class="wh-bottom-nav" id="bottomNav">
+        <a href="index.html" class="bottom-nav-link">
+            <i class="fas fa-home"></i><span>Home</span>
+        </a>
+        <a href="about.html" class="bottom-nav-link">
+            <i class="fas fa-info-circle"></i><span>About</span>
+        </a>
+        <a href="study-abroad.html" class="bottom-nav-link">
+            <i class="fas fa-graduation-cap"></i><span>Study Abroad</span>
+        </a>
+        <a href="index.html" class="bottom-nav-logo">
+            <div class="bnl-img-wrap">
+                <img src="images/wh logo@4x-600w.png" alt="WH Doctors" />
+            </div>
+        </a>
+        <a href="services.html" class="bottom-nav-link">
+            <i class="fas fa-cogs"></i><span>Services</span>
+        </a>
+        <a href="conference.html" class="bottom-nav-link">
+            <i class="fas fa-chalkboard-teacher"></i><span>Conference</span>
+        </a>
+        <a href="contact.html" class="bottom-nav-link">
+            <i class="fas fa-envelope"></i><span>Contact</span>
+        </a>
+    </nav>
+
+    <!-- ===== PAGE HERO ===== -->
+    <div class="page-hero">
+        <h1>How to Study in Malaysia:<br>Complete Guide for International Students</h1>
+        <span class="date-badge"><i class="fas fa-calendar-alt"></i> March 10, 2024 &nbsp;|&nbsp; <i
+                class="fas fa-user"></i> WH Doctors Team</span>
+    </div>
+
+    <!-- ===== BLOG DETAIL SECTION ===== -->
+    <section class="blog-detail-section">
+        <div class="blog-detail-container">
+
+            <!-- Main Article -->
+            <article class="blog-article">
+                <a href="blog.html" class="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+
+                <div class="blog-meta">
+                    <span><i class="fas fa-calendar-alt"></i> March 10, 2024</span>
+                    <span><i class="fas fa-user"></i> WH Doctors Team</span>
+                    <span><i class="fas fa-clock"></i> 8 min read</span>
+                    <span class="tag">Study Abroad</span>
+                    <span class="tag">Malaysia</span>
+                </div>
+
+                <img class="hero-img"
+                    src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80"
+                    alt="Students studying in Malaysia" />
+
+                <h2>Why Study in Malaysia?</h2>
+                <p>Malaysia has emerged as one of Asia's premier education hubs, attracting thousands of international
+                    students every year. With its world-class universities, affordable cost of living, and multicultural
+                    environment, Malaysia offers an exceptional study abroad experience.</p>
+
+                <p>W H Doctors Study Lab Ltd. has helped hundreds of students successfully enroll in top Malaysian
+                    universities including <strong>UKM, UPM, UTM, Universiti Malaya, Taylor's University, and INTI
+                        International University</strong>.</p>
+
+                <h3>🎓 Top Universities in Malaysia</h3>
+                <ul>
+                    <li><strong>Universiti Kebangsaan Malaysia (UKM)</strong> — Top research-intensive university</li>
+                    <li><strong>Universiti Putra Malaysia (UPM)</strong> — World-class agricultural and science programs
+                    </li>
+                    <li><strong>Universiti Teknologi Malaysia (UTM)</strong> — Premier engineering programs</li>
+                    <li><strong>Universiti Malaya (UM)</strong> — Malaysia's oldest and highest-ranked university</li>
+                    <li><strong>Taylor's University</strong> — Best private university for international students</li>
+                    <li><strong>INTI International University</strong> — Strong industry connections and partnerships
+                    </li>
+                </ul>
+
+                <h3>💰 Cost of Studying in Malaysia</h3>
+                <p>One of the biggest advantages of studying in Malaysia is its affordability compared to other popular
+                    destinations like the UK or Australia.</p>
+                <ul>
+                    <li>Bachelor's degree: <strong>RM 20,000 – RM 60,000</strong> per year</li>
+                    <li>Master's degree: <strong>RM 15,000 – RM 40,000</strong> per year</li>
+                    <li>PhD: <strong>RM 10,000 – RM 30,000</strong> per year</li>
+                    <li>Monthly living expenses: <strong>RM 1,500 – RM 2,500</strong></li>
+                </ul>
+
+                <h3>🛂 Student Visa Requirements</h3>
+                <p>To study in Malaysia as an international student, you'll need a Student Pass. The general
+                    requirements include:</p>
+                <ul>
+                    <li>Valid passport (at least 18 months validity)</li>
+                    <li>Letter of Offer/Acceptance from a Malaysian institution</li>
+                    <li>Academic transcripts and certificates</li>
+                    <li>Financial proof (bank statement)</li>
+                    <li>English proficiency test results (IELTS/TOEFL)</li>
+                    <li>Medical examination clearance</li>
+                </ul>
+
+                <h3>🌟 How WH Doctors Can Help You</h3>
+                <p>At WH Doctors Study Lab Ltd., we provide <strong>100% FREE counselling and application
+                        assistance</strong>. Our expert team will help you:</p>
+                <ul>
+                    <li>Choose the right university and program</li>
+                    <li>Prepare and submit your application</li>
+                    <li>Complete the student visa process step by step</li>
+                    <li>Find accommodation in Malaysia</li>
+                    <li>Prepare for your arrival and adjustment</li>
+                </ul>
+
+                <p>Contact us today to start your journey to Malaysia. Our consultants are available 10 AM to 6 PM on
+                    all working days via WhatsApp, phone, or email.</p>
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="blog-sidebar">
+
+                <!-- CTA Card -->
+                <div class="cta-sidebar">
+                    <h4>🎓 Get Free Counselling</h4>
+                    <p>Our experts will guide you to the perfect university and handle everything from application to
+                        visa.</p>
+                    <a href="contact.html">Book FREE Session →</a>
+                </div>
+
+                <!-- Latest Blogs -->
+                <div class="sidebar-card">
+                    <h4>Latest Articles</h4>
+
+                    <a href="blog-details.html" class="latest-blog-item">
+                        <div class="lbi-icon">🎓</div>
+                        <div class="lbi-text">
+                            <h5>Top Scholarships for Bangladeshi Students in 2024</h5>
+                            <span>Feb 2024</span>
+                        </div>
+                    </a>
+
+                    <a href="blog-details.html" class="latest-blog-item">
+                        <div class="lbi-icon">✈️</div>
+                        <div class="lbi-text">
+                            <h5>Student Visa Tips: 95% Approval Rate Secrets</h5>
+                            <span>Jan 2024</span>
+                        </div>
+                    </a>
+
+                    <a href="blog-details.html" class="latest-blog-item">
+                        <div class="lbi-icon">🏫</div>
+                        <div class="lbi-text">
+                            <h5>PhD Research Opportunities in Top Universities 2024</h5>
+                            <span>Dec 2023</span>
+                        </div>
+                    </a>
+
+                    <a href="blog-details.html" class="latest-blog-item">
+                        <div class="lbi-icon">🌍</div>
+                        <div class="lbi-text">
+                            <h5>Cost of Living: Malaysia vs UK vs Canada</h5>
+                            <span>Nov 2023</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="sidebar-card">
+                    <h4>📞 Contact WH Doctors</h4>
+                    <p style="color:#555; font-size:0.9rem; margin-bottom:14px;">Ready to start your abroad journey? Get
+                        in touch with our expert counsellors.</p>
+                    <p style="color:#555; font-size:0.88rem; margin-bottom:6px;"><i class="fas fa-phone"
+                            style="color:#F39C12;margin-right:6px;"></i> +60 19-568 6867</p>
+                    <p style="color:#555; font-size:0.88rem; margin-bottom:6px;"><i class="fas fa-envelope"
+                            style="color:#F39C12;margin-right:6px;"></i> harun.sh96@gmail.com</p>
+                    <p style="color:#555; font-size:0.88rem;"><i class="fas fa-clock"
+                            style="color:#F39C12;margin-right:6px;"></i> 10 AM – 6 PM (Working Days)</p>
+                </div>
+
+            </aside>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="wh-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="fb-logo">
+                    <img src="images/logo white@4x.png" alt="WH Doctors Study Lab" />
+                </div>
+                <p>WH Doctors Study Lab Ltd. — Your trusted gateway to global education. Free counselling, visa support
+                    & PhD mentoring for students worldwide.</p>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/harun.rashid.56884761" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/60195686867" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://web.wechat.com/uklccp" target="_blank"><i class="fab fa-weixin"></i></a>
+                    <a href="https://x.com/harunra15855182" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="study-abroad.html">Study Abroad</a></li>
+                    <li><a href="blog.html">Blog & News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="study-abroad.html">🇲🇾 Malaysia</a></li>
+                    <li><a href="study-abroad.html">🇬🇧 United Kingdom</a></li>
+                    <li><a href="study-abroad.html">🇺🇸 USA</a></li>
+                    <li><a href="study-abroad.html">🇨🇦 Canada</a></li>
+                    <li><a href="study-abroad.html">🇦🇺 Australia</a></li>
+                    <li><a href="study-abroad.html">🇪🇺 Europe</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><a href="tel:+60195686867"><i class="fas fa-phone"
+                                style="color:#F39C12; margin-right:6px;"></i>+60 19-568 6867</a></li>
+                    <li><a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"
+                                style="color:#F39C12; margin-right:6px;"></i>harun.sh96@gmail.com</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"
+                                style="color:#F39C12; margin-right:6px;"></i>Uttara, Dhaka, Bangladesh</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"
+                                style="color:#F39C12; margin-right:6px;"></i>Serdang, Selangor, Malaysia</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 WH Doctors Study Lab Ltd. All rights reserved. | Designed by Ashik</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/60195686867" target="_blank" class="float-wa" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+
+</html>

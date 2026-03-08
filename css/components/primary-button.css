@@ -1,0 +1,31 @@
+.primary-button-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.primary-button-button {
+  color: var(--dl-color-gray-white);
+  align-self: center;
+  transition: 0.3s;
+  padding-top: 12px;
+  border-width: 0px;
+  padding-left: 32px;
+  border-radius: var(--dl-radius-radius-radius6);
+  padding-right: 32px;
+  padding-bottom: 12px;
+  background-color: var(--dl-color-newtheme-base);
+}
+.primary-button-button:hover {
+  background-color: var(--dl-color-newtheme-green);
+}
+.primary-button-button:active {
+  background-color: #6209c6ff;
+}
+
+@media(max-width: 767px) {
+  .primary-button-root-class-name {
+    align-self: flex-start;
+  }
+}

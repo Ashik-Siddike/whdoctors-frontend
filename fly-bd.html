@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fly from Bangladesh - WH Doctors Study Lab Ltd.</title>
+    <meta name="description"
+        content="Planning to fly from Bangladesh for your studies? WH Doctors guides you through flights, airport procedures, travel tips, and arrival support." />
+    <link rel="icon" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800;900&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/home-redesign.css" />
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            padding: 100px 20px 60px;
+            text-align: center;
+            color: white;
+        }
+
+        .page-hero h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+
+        .page-hero p {
+            font-size: 1.05rem;
+            opacity: .85;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        .plane-anim {
+            font-size: 60px;
+            display: block;
+            margin-bottom: 16px;
+            animation: fly 3s ease-in-out infinite;
+        }
+
+        @keyframes fly {
+
+            0%,
+            100% {
+                transform: translateX(-8px);
+            }
+
+            50% {
+                transform: translateX(8px);
+            }
+        }
+
+        .sec {
+            padding: 70px 20px 100px;
+            background: #f8f9fa;
+        }
+
+        .con {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sh {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .sh h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(1.7rem, 4vw, 2.3rem);
+            font-weight: 900;
+            color: #2C3E50;
+        }
+
+        .sh .bar {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #F39C12, #E74C3C);
+            border-radius: 2px;
+            margin: 14px auto 0;
+        }
+
+        .sh p {
+            color: #727272;
+            margin-top: 14px;
+        }
+
+        /* Route cards */
+        .route-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .route-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, .07);
+            transition: transform .3s;
+        }
+
+        .route-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .route-top {
+            padding: 28px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .route-flags {
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .route-arrow {
+            font-size: 18px;
+            color: #ddd;
+        }
+
+        .route-card h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 900;
+            color: #2C3E50;
+            margin-bottom: 4px;
+        }
+
+        .route-card .sub {
+            font-size: .82rem;
+            color: #aaa;
+        }
+
+        .route-body {
+            padding: 0 28px 28px;
+        }
+
+        .route-body p {
+            color: #727272;
+            font-size: .87rem;
+            line-height: 1.65;
+            margin-bottom: 14px;
+        }
+
+        .route-facts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .rfact {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 9px 12px;
+        }
+
+        .rfact .fl {
+            font-size: .74rem;
+            color: #bbb;
+            margin-bottom: 2px;
+        }
+
+        .rfact .fv {
+            font-size: .86rem;
+            font-weight: 700;
+            color: #2C3E50;
+        }
+
+        /* Travel Tips */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .tip-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 3px 14px rgba(0, 0, 0, .06);
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        .tip-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .tip-text h4 {
+            font-family: 'Sora', sans-serif;
+            font-size: .95rem;
+            font-weight: 800;
+            color: #2C3E50;
+            margin-bottom: 6px;
+        }
+
+        .tip-text p {
+            font-size: .85rem;
+            color: #727272;
+            line-height: 1.6;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+
+        .tl-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 32px;
+        }
+
+        .tl-dot {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #F39C12, #E74C3C);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Sora', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 900;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .tl-text h4 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1rem;
+            font-weight: 800;
+            color: #2C3E50;
+            margin-bottom: 4px;
+            padding-top: 10px;
+        }
+
+        .tl-text p {
+            font-size: .87rem;
+            color: #727272;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .cta-fly {
+            background: linear-gradient(135deg, #0f0c29, #24243e);
+            border-radius: 24px;
+            padding: 60px 30px;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+
+        .cta-fly h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 14px;
+        }
+
+        .cta-fly p {
+            opacity: .85;
+            max-width: 500px;
+            margin: 0 auto 28px;
+        }
+
+        .cta-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btns a {
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: .95rem;
+            text-decoration: none;
+            transition: transform .2s;
+        }
+
+        .cta-btns .bw {
+            background: white;
+            color: #0f0c29;
+        }
+
+        .cta-btns .bo {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .cta-btns a:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wh-topbar">
+        <div class="wh-topbar-inner">
+            <div class="wh-topbar-left">
+                <span><i class="fas fa-map-marker-alt"></i> House 44, Road 11, Sector 13, Uttara, Dhaka-1230</span>
+                <a href="tel:+60195686867"><i class="fas fa-phone"></i> +60 19-568 6867</a>
+                <a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"></i> harun.sh96@gmail.com</a>
+            </div>
+            <div class="wh-topbar-right">
+                <a href="https://www.facebook.com/harun.rashid.56884761" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://web.wechat.com/uklccp" target="_blank"><i class="fab fa-weixin"></i></a>
+                <a href="https://wa.me/60195686867" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://x.com/harunra15855182" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA" target="_blank"><i
+                        class="fab fa-youtube"></i></a>
+                <div class="wh-topbar-cta">
+                    <a href="appointment.html" class="btn-top-outline"><i class="fas fa-calendar-check"></i> Book
+                        Session</a>
+                    <a href="contact.html" class="btn-top-primary"><i class="fas fa-paper-plane"></i> Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="wh-bottom-nav" id="bottomNav">
+        <a href="index.html" class="bottom-nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="about.html" class="bottom-nav-link"><i class="fas fa-info-circle"></i><span>About</span></a>
+        <a href="study-abroad.html" class="bottom-nav-link"><i class="fas fa-graduation-cap"></i><span>Study
+                Abroad</span></a>
+        <a href="index.html" class="bottom-nav-logo">
+            <div class="bnl-img-wrap"><img src="images/wh logo@4x-600w.png" alt="WH Doctors" /></div>
+        </a>
+        <a href="services.html" class="bottom-nav-link"><i class="fas fa-cogs"></i><span>Services</span></a>
+        <a href="conference.html" class="bottom-nav-link"><i
+                class="fas fa-chalkboard-teacher"></i><span>Conference</span></a>
+        <a href="contact.html" class="bottom-nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a>
+    </nav>
+
+    <div class="page-hero">
+        <span class="plane-anim">✈️</span>
+        <h1>Fly from Bangladesh</h1>
+        <p>Your complete guide to flying from Dhaka (DAC) to your study destination — flights, airports, travel tips,
+            and arrival support.</p>
+    </div>
+
+    <section class="sec">
+        <div class="con">
+
+            <!-- Flight Routes -->
+            <div class="sh">
+                <h2>Popular Flight Routes from Dhaka</h2>
+                <div class="bar"></div>
+                <p>Most common routes taken by Bangladeshi students studying abroad</p>
+            </div>
+            <div class="route-grid">
+                <div class="route-card">
+                    <div class="route-top">
+                        <div class="route-flags"><span>🇧🇩</span><span class="route-arrow">→</span><span>🇲🇾</span>
+                        </div>
+                        <div>
+                            <h3>Dhaka → Kuala Lumpur</h3>
+                            <div class="sub">DAC → KLIA / klia2</div>
+                        </div>
+                    </div>
+                    <div class="route-body">
+                        <p>Most popular route for students heading to Malaysian universities. Multiple daily flights
+                            available with competitive prices.</p>
+                        <div class="route-facts">
+                            <div class="rfact">
+                                <div class="fl">Flight Time</div>
+                                <div class="fv">~3.5 hours</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Airlines</div>
+                                <div class="fv">Biman, AirAsia, Malindo</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Ticket Price</div>
+                                <div class="fv">BDT 20,000–60,000</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Best Time</div>
+                                <div class="fv">Book 2–3 months early</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-top">
+                        <div class="route-flags"><span>🇧🇩</span><span class="route-arrow">→</span><span>🇬🇧</span>
+                        </div>
+                        <div>
+                            <h3>Dhaka → London</h3>
+                            <div class="sub">DAC → Heathrow / Gatwick</div>
+                        </div>
+                    </div>
+                    <div class="route-body">
+                        <p>Direct and connecting flights from Dhaka to London via Doha, Dubai, or Abu Dhabi. Budget 1–2
+                            stopovers for best prices.</p>
+                        <div class="route-facts">
+                            <div class="rfact">
+                                <div class="fl">Flight Time</div>
+                                <div class="fv">~15–20 hours</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Airlines</div>
+                                <div class="fv">Qatar, Emirates, Biman</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Ticket Price</div>
+                                <div class="fv">BDT 60,000–1,80,000</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Stopover</div>
+                                <div class="fv">Doha / Dubai / Abu Dhabi</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-top">
+                        <div class="route-flags"><span>🇧🇩</span><span class="route-arrow">→</span><span>🇺🇸</span>
+                        </div>
+                        <div>
+                            <h3>Dhaka → USA</h3>
+                            <div class="sub">DAC → JFK / ORD / LAX</div>
+                        </div>
+                    </div>
+                    <div class="route-body">
+                        <p>Long-haul flights via Middle East hubs to major US cities. Plan for multiple connections and
+                            a full day of travel.</p>
+                        <div class="route-facts">
+                            <div class="rfact">
+                                <div class="fl">Flight Time</div>
+                                <div class="fv">~20–28 hours</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Airlines</div>
+                                <div class="fv">Qatar, Emirates, Turkish</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Ticket Price</div>
+                                <div class="fv">BDT 80,000–2,50,000</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Stopover</div>
+                                <div class="fv">Doha / Istanbul / Dubai</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-top">
+                        <div class="route-flags"><span>🇧🇩</span><span class="route-arrow">→</span><span>🇨🇦</span>
+                        </div>
+                        <div>
+                            <h3>Dhaka → Canada</h3>
+                            <div class="sub">DAC → YYZ / YVR</div>
+                        </div>
+                    </div>
+                    <div class="route-body">
+                        <p>Fly via Doha, Istanbul, or London to reach Toronto or Vancouver. Canadian students often
+                            connect through London Heathrow.</p>
+                        <div class="route-facts">
+                            <div class="rfact">
+                                <div class="fl">Flight Time</div>
+                                <div class="fv">~22–26 hours</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Airlines</div>
+                                <div class="fv">Qatar, Turkish, Emirates</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Ticket Price</div>
+                                <div class="fv">BDT 90,000–2,40,000</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Stopover</div>
+                                <div class="fv">Doha / London / Istanbul</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-top">
+                        <div class="route-flags"><span>🇧🇩</span><span class="route-arrow">→</span><span>🇦🇺</span>
+                        </div>
+                        <div>
+                            <h3>Dhaka → Australia</h3>
+                            <div class="sub">DAC → SYD / MEL / BNE</div>
+                        </div>
+                    </div>
+                    <div class="route-body">
+                        <p>Reach Australian cities via Singapore, Kuala Lumpur, or Dubai. Singapore Airlines via KUL or
+                            SIN is a popular option.</p>
+                        <div class="route-facts">
+                            <div class="rfact">
+                                <div class="fl">Flight Time</div>
+                                <div class="fv">~18–24 hours</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Airlines</div>
+                                <div class="fv">SIA, MH, Emirates</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Ticket Price</div>
+                                <div class="fv">BDT 70,000–2,00,000</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Stopover</div>
+                                <div class="fv">Singapore / KL / Dubai</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="route-card">
+                    <div class="route-top">
+                        <div class="route-flags"><span>🇧🇩</span><span class="route-arrow">→</span><span>🇪🇺</span>
+                        </div>
+                        <div>
+                            <h3>Dhaka → Europe</h3>
+                            <div class="sub">DAC → FRA / AMS / CDG</div>
+                        </div>
+                    </div>
+                    <div class="route-body">
+                        <p>Fly to Germany, Netherlands, or France via Middle East hubs. Frankfurt is the major European
+                            hub for Bangladeshi students.</p>
+                        <div class="route-facts">
+                            <div class="rfact">
+                                <div class="fl">Flight Time</div>
+                                <div class="fv">~14–20 hours</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Airlines</div>
+                                <div class="fv">Lufthansa, Turkish, Qatar</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Ticket Price</div>
+                                <div class="fv">BDT 55,000–1,60,000</div>
+                            </div>
+                            <div class="rfact">
+                                <div class="fl">Stopover</div>
+                                <div class="fv">Istanbul / Doha / Dubai</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pre-Departure Timeline -->
+            <div class="sh" style="margin-top:70px;">
+                <h2>Pre-Departure Checklist</h2>
+                <div class="bar"></div>
+                <p>Follow these steps before your flight day</p>
+            </div>
+            <div class="timeline">
+                <div class="tl-item">
+                    <div class="tl-dot">8W</div>
+                    <div class="tl-text">
+                        <h4>8 Weeks Before: Book Your Flight</h4>
+                        <p>Book your flight ticket early for best prices. Bring your offer letter and student visa for
+                            proof when booking.</p>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot">4W</div>
+                    <div class="tl-text">
+                        <h4>4 Weeks Before: Arrange Accommodation</h4>
+                        <p>Confirm your student accommodation. Arrange airport pickup if available from your university
+                            or hostel.</p>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot">2W</div>
+                    <div class="tl-text">
+                        <h4>2 Weeks Before: Prepare Documents</h4>
+                        <p>Organize all documents: passport, visa, offer letter, financial statements, academic
+                            certificates, and vaccination card.</p>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot">1W</div>
+                    <div class="tl-text">
+                        <h4>1 Week Before: Pack & Carry-On Essentials</h4>
+                        <p>Pack smart — check airline baggage limits. Keep all important documents in your carry-on bag,
+                            never in checked luggage.</p>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-dot">✈️</div>
+                    <div class="tl-text">
+                        <h4>Departure Day: Arrive Early</h4>
+                        <p>Arrive at Dhaka airport 3–4 hours before international flights. Have your boarding pass,
+                            passport, and visa ready.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Travel Tips -->
+            <div class="sh" style="margin-top:70px;">
+                <h2>Essential Travel Tips</h2>
+                <div class="bar"></div>
+                <p>Advice from students who've already made the journey</p>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon" style="background:linear-gradient(135deg,#F39C12,#E74C3C);color:white;"><i
+                            class="fas fa-luggage-cart"></i></div>
+                    <div class="tip-text">
+                        <h4>Baggage Allowance</h4>
+                        <p>Check your airline's baggage policy. Most students get 20–30 kg. Pack university essentials,
+                            not heavy household items.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon" style="background:linear-gradient(135deg,#2193b0,#6dd5ed);color:white;"><i
+                            class="fas fa-money-bill-wave"></i></div>
+                    <div class="tip-text">
+                        <h4>Carry Cash & Card</h4>
+                        <p>Take some USD or destination currency for airport expenses. Notify your bank about
+                            international travel before leaving.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon" style="background:linear-gradient(135deg,#27ae60,#2ecc71);color:white;"><i
+                            class="fas fa-file-medical"></i></div>
+                    <div class="tip-text">
+                        <h4>Health & Insurance</h4>
+                        <p>Get travel insurance before departure. Some countries require proof of health insurance with
+                            your visa application.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon" style="background:linear-gradient(135deg,#8e44ad,#9b59b6);color:white;"><i
+                            class="fas fa-sim-card"></i></div>
+                    <div class="tip-text">
+                        <h4>SIM Card on Arrival</h4>
+                        <p>Get a local SIM card at the airport when you land. WhatsApp your family immediately to
+                            confirm safe arrival.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon" style="background:linear-gradient(135deg,#E74C3C,#c0392b);color:white;"><i
+                            class="fas fa-shield-alt"></i></div>
+                    <div class="tip-text">
+                        <h4>Keep Documents Safe</h4>
+                        <p>Keep digital copies of all documents on Google Drive or email. Physical originals should be
+                            in your carry-on bag always.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon" style="background:linear-gradient(135deg,#16a085,#1abc9c);color:white;"><i
+                            class="fas fa-map-marked-alt"></i></div>
+                    <div class="tip-text">
+                        <h4>Know Your Route</h4>
+                        <p>Download offline maps for your destination city. Know your university/accommodation address
+                            and how to reach it from the airport.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-fly">
+                <h2>Need Help Planning Your Flight?</h2>
+                <p>Our team helps students with complete pre-departure planning — from flight booking tips to airport
+                    arrival guidance.</p>
+                <div class="cta-btns">
+                    <a href="contact.html" class="bw">📞 Get Travel Guidance — Free!</a>
+                    <a href="study-abroad.html" class="bo">🌍 Explore Study Destinations</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="wh-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="fb-logo"><img src="images/logo white@4x.png" alt="WH Doctors Study Lab" /></div>
+                <p>WH Doctors Study Lab Ltd. — Your trusted gateway to global education.</p>
+                <div class="footer-socials"><a href="https://www.facebook.com/harun.rashid.56884761" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a><a href="https://wa.me/60195686867" target="_blank"><i
+                            class="fab fa-whatsapp"></i></a><a href="https://web.wechat.com/uklccp" target="_blank"><i
+                            class="fab fa-weixin"></i></a><a href="https://x.com/harunra15855182" target="_blank"><i
+                            class="fab fa-x-twitter"></i></a><a
+                        href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA" target="_blank"><i
+                            class="fab fa-youtube"></i></a></div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="study-abroad.html">Study Abroad</a></li>
+                    <li><a href="fly-bd.html">Fly from BD</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="study-abroad.html">🇲🇾 Malaysia</a></li>
+                    <li><a href="study-abroad.html">🇬🇧 United Kingdom</a></li>
+                    <li><a href="study-abroad.html">🇺🇸 USA</a></li>
+                    <li><a href="study-abroad.html">🇨🇦 Canada</a></li>
+                    <li><a href="study-abroad.html">🇦🇺 Australia</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><a href="tel:+60195686867"><i class="fas fa-phone"
+                                style="color:#F39C12;margin-right:6px;"></i>+60 19-568 6867</a></li>
+                    <li><a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"
+                                style="color:#F39C12;margin-right:6px;"></i>harun.sh96@gmail.com</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt" style="color:#F39C12;margin-right:6px;"></i>Uttara,
+                            Dhaka, Bangladesh</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 WH Doctors Study Lab Ltd. All rights reserved. | Designed by Ashik</p>
+        </div>
+    </footer>
+    <a href="https://wa.me/60195686867" target="_blank" class="float-wa"><i class="fab fa-whatsapp"></i></a>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+.slide-to-top-slide-to-top {
+  flex: 0 0 auto;
+  right: 30px;
+  width: 50px;
+  bottom: 30px;
+  cursor: pointer;
+  height: 50px;
+  display: flex;
+  z-index: 120;
+  position: fixed;
+  align-self: flex-end;
+  box-shadow: 0px 0px 10px 2px #3a2020;
+  transition: 0.3s;
+  align-items: center;
+  border-color: var(--dl-color-newtheme-white);
+  border-width: 3px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  justify-content: center;
+  text-decoration: none;
+  background-color: var(--dl-color-newtheme-base);
+}
+.slide-to-top-slide-to-top:hover {
+  background-color: var(--dl-color-gray-black);
+}
+.slide-to-top-icon {
+  fill: var(--dl-color-gray-white);
+  width: 36px;
+  height: 36px;
+  z-index: 200;
+}
+
+
+
+
+
+
+
+

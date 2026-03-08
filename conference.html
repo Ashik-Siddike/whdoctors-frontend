@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Conference & Seminars - WH Doctors Study Lab Ltd.</title>
+        <meta name="description"
+                content="Join WH Doctors Study Lab conferences, seminars, and webinars on overseas education, scholarships, and study abroad guidance." />
+        <link rel="icon" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800;900&family=Inter:wght@400;600&display=swap"
+                rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <link rel="stylesheet" href="css/home-redesign.css" />
+        <style>
+                .page-hero {
+                        background: linear-gradient(135deg, #1a2a4a, #8e44ad);
+                        padding: 100px 20px 60px;
+                        text-align: center;
+                        color: white;
+                }
+
+                .page-hero h1 {
+                        font-family: 'Sora', sans-serif;
+                        font-size: clamp(2rem, 5vw, 3rem);
+                        font-weight: 900;
+                        margin-bottom: 12px;
+                }
+
+                .page-hero p {
+                        font-size: 1.05rem;
+                        opacity: .85;
+                        max-width: 560px;
+                        margin: 0 auto;
+                }
+
+                .sec {
+                        padding: 70px 20px 100px;
+                        background: #f8f9fa;
+                }
+
+                .con {
+                        max-width: 1200px;
+                        margin: 0 auto;
+                }
+
+                .sh {
+                        text-align: center;
+                        margin-bottom: 50px;
+                }
+
+                .sh h2 {
+                        font-family: 'Sora', sans-serif;
+                        font-size: clamp(1.7rem, 4vw, 2.3rem);
+                        font-weight: 900;
+                        color: #2C3E50;
+                }
+
+                .sh .bar {
+                        width: 60px;
+                        height: 4px;
+                        background: linear-gradient(135deg, #F39C12, #E74C3C);
+                        border-radius: 2px;
+                        margin: 14px auto 0;
+                }
+
+                .sh p {
+                        color: #727272;
+                        margin-top: 14px;
+                }
+
+                /* Event Cards */
+                .ev-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+                        gap: 28px;
+                }
+
+                .ev-card {
+                        background: #fff;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        box-shadow: 0 4px 20px rgba(0, 0, 0, .07);
+                        transition: transform .3s;
+                }
+
+                .ev-card:hover {
+                        transform: translateY(-6px);
+                }
+
+                .ev-banner {
+                        height: 180px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 60px;
+                }
+
+                .ev-body {
+                        padding: 24px;
+                }
+
+                .ev-badge {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 6px;
+                        font-size: .76rem;
+                        font-weight: 700;
+                        padding: 4px 12px;
+                        border-radius: 50px;
+                        margin-bottom: 12px;
+                }
+
+                .ev-card h3 {
+                        font-family: 'Sora', sans-serif;
+                        font-size: 1.1rem;
+                        font-weight: 900;
+                        color: #2C3E50;
+                        margin-bottom: 10px;
+                }
+
+                .ev-card p {
+                        color: #727272;
+                        font-size: .87rem;
+                        line-height: 1.65;
+                        margin-bottom: 16px;
+                }
+
+                .ev-meta {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 12px;
+                        margin-bottom: 18px;
+                }
+
+                .ev-meta span {
+                        font-size: .8rem;
+                        color: #888;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                }
+
+                .ev-card a {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 6px;
+                        background: linear-gradient(135deg, #F39C12, #E74C3C);
+                        color: white;
+                        padding: 10px 22px;
+                        border-radius: 50px;
+                        font-weight: 700;
+                        font-size: .88rem;
+                        text-decoration: none;
+                        transition: transform .2s;
+                }
+
+                .ev-card a:hover {
+                        transform: scale(1.04);
+                }
+
+                /* Highlight stats */
+                .conf-stats {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                        gap: 24px;
+                        background: linear-gradient(135deg, #1a2a4a, #8e44ad);
+                        border-radius: 20px;
+                        padding: 40px;
+                        margin-bottom: 70px;
+                }
+
+                .cs-item {
+                        text-align: center;
+                        color: white;
+                }
+
+                .cs-item .num {
+                        font-family: 'Sora', sans-serif;
+                        font-size: 2.5rem;
+                        font-weight: 900;
+                }
+
+                .cs-item .lbl {
+                        font-size: .88rem;
+                        opacity: .85;
+                        margin-top: 4px;
+                }
+
+                /* Webinar form */
+                .webinar-box {
+                        background: #fff;
+                        border-radius: 20px;
+                        padding: 40px;
+                        box-shadow: 0 4px 20px rgba(0, 0, 0, .07);
+                        margin-top: 70px;
+                }
+
+                .webinar-box h2 {
+                        font-family: 'Sora', sans-serif;
+                        font-size: 1.6rem;
+                        font-weight: 900;
+                        color: #2C3E50;
+                        margin-bottom: 8px;
+                }
+
+                .webinar-box p {
+                        color: #727272;
+                        margin-bottom: 24px;
+                }
+
+                .reg-form {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 16px;
+                }
+
+                @media(max-width:600px) {
+                        .reg-form {
+                                grid-template-columns: 1fr;
+                        }
+                }
+
+                .reg-form input,
+                .reg-form select {
+                        padding: 13px 16px;
+                        border: 2px solid #e8e8e8;
+                        border-radius: 12px;
+                        font-family: 'Inter', sans-serif;
+                        font-size: .9rem;
+                        outline: none;
+                        transition: border .2s;
+                }
+
+                .reg-form input:focus,
+                .reg-form select:focus {
+                        border-color: #F39C12;
+                }
+
+                .reg-form .full {
+                        grid-column: 1/-1;
+                }
+
+                .reg-form button {
+                        grid-column: 1/-1;
+                        background: linear-gradient(135deg, #F39C12, #E74C3C);
+                        color: white;
+                        border: none;
+                        padding: 14px;
+                        border-radius: 12px;
+                        font-weight: 800;
+                        font-size: 1rem;
+                        cursor: pointer;
+                        font-family: 'Sora', sans-serif;
+                        transition: transform .2s;
+                }
+
+                .reg-form button:hover {
+                        transform: scale(1.02);
+                }
+        </style>
+</head>
+
+<body>
+        <div class="wh-topbar">
+                <div class="wh-topbar-inner">
+                        <div class="wh-topbar-left">
+                                <span><i class="fas fa-map-marker-alt"></i> House 44, Road 11, Sector 13, Uttara,
+                                        Dhaka-1230</span>
+                                <a href="tel:+60195686867"><i class="fas fa-phone"></i> +60 19-568 6867</a>
+                                <a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"></i>
+                                        harun.sh96@gmail.com</a>
+                        </div>
+                        <div class="wh-topbar-right">
+                                <a href="https://www.facebook.com/harun.rashid.56884761" target="_blank"><i
+                                                class="fab fa-facebook-f"></i></a>
+                                <a href="https://web.wechat.com/uklccp" target="_blank"><i
+                                                class="fab fa-weixin"></i></a>
+                                <a href="https://wa.me/60195686867" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://x.com/harunra15855182" target="_blank"><i
+                                                class="fab fa-x-twitter"></i></a>
+                                <a href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA" target="_blank"><i
+                                                class="fab fa-youtube"></i></a>
+                                <div class="wh-topbar-cta">
+                                        <a href="appointment.html" class="btn-top-outline"><i
+                                                        class="fas fa-calendar-check"></i> Book Session</a>
+                                        <a href="contact.html" class="btn-top-primary"><i
+                                                        class="fas fa-paper-plane"></i> Apply Now</a>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <nav class="wh-bottom-nav" id="bottomNav">
+                <a href="index.html" class="bottom-nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+                <a href="about.html" class="bottom-nav-link"><i class="fas fa-info-circle"></i><span>About</span></a>
+                <a href="study-abroad.html" class="bottom-nav-link"><i class="fas fa-graduation-cap"></i><span>Study
+                                Abroad</span></a>
+                <a href="index.html" class="bottom-nav-logo">
+                        <div class="bnl-img-wrap"><img src="images/wh logo@4x-600w.png" alt="WH Doctors" /></div>
+                </a>
+                <a href="services.html" class="bottom-nav-link"><i class="fas fa-cogs"></i><span>Services</span></a>
+                <a href="conference.html" class="bottom-nav-link active"><i
+                                class="fas fa-chalkboard-teacher"></i><span>Conference</span></a>
+                <a href="contact.html" class="bottom-nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a>
+        </nav>
+
+        <div class="page-hero">
+                <h1>🎤 Conferences & Seminars</h1>
+                <p>Join our education conferences, webinars, and seminars to get direct insights on studying abroad from
+                        expert counsellors.</p>
+        </div>
+
+        <section class="sec">
+                <div class="con">
+
+                        <!-- Stats -->
+                        <div class="conf-stats">
+                                <div class="cs-item">
+                                        <div class="num">50+</div>
+                                        <div class="lbl">Events Hosted</div>
+                                </div>
+                                <div class="cs-item">
+                                        <div class="num">10K+</div>
+                                        <div class="lbl">Attendees</div>
+                                </div>
+                                <div class="cs-item">
+                                        <div class="num">20+</div>
+                                        <div class="lbl">Expert Speakers</div>
+                                </div>
+                                <div class="cs-item">
+                                        <div class="num">5</div>
+                                        <div class="lbl">Countries Represented</div>
+                                </div>
+                        </div>
+
+                        <!-- Upcoming Events -->
+                        <div class="sh">
+                                <h2>Upcoming Events</h2>
+                                <div class="bar"></div>
+                                <p>Register now — seats are limited!</p>
+                        </div>
+                        <div class="ev-grid">
+                                <div class="ev-card">
+                                        <div class="ev-banner"
+                                                style="background:linear-gradient(135deg,#1a2a4a,#8e44ad);">🎓</div>
+                                        <div class="ev-body">
+                                                <span class="ev-badge"
+                                                        style="background:rgba(142,68,173,.1);color:#8e44ad;"><i
+                                                                class="fas fa-video"></i> Webinar</span>
+                                                <h3>Malaysia University Education Fair 2024</h3>
+                                                <p>Meet representatives from 30+ top Malaysian universities. Get direct
+                                                        admission offers, scholarship info, and application guidance in
+                                                        one session.</p>
+                                                <div class="ev-meta">
+                                                        <span><i class="fas fa-calendar"></i> April 15, 2024</span>
+                                                        <span><i class="fas fa-clock"></i> 7:00 PM (BD Time)</span>
+                                                        <span><i class="fas fa-globe"></i> Online via Zoom</span>
+                                                </div>
+                                                <a href="contact.html">Register Free <i
+                                                                class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                </div>
+
+                                <div class="ev-card">
+                                        <div class="ev-banner"
+                                                style="background:linear-gradient(135deg,#1a3a5c,#2193b0);">🌍</div>
+                                        <div class="ev-body">
+                                                <span class="ev-badge"
+                                                        style="background:rgba(33,147,176,.1);color:#2193b0;"><i
+                                                                class="fas fa-users"></i> Seminar</span>
+                                                <h3>Study Abroad Seminar — Dhaka 2024</h3>
+                                                <p>In-person seminar in Dhaka covering UK, Canada, and Australia study
+                                                        options. One-on-one counselling sessions available after the
+                                                        main event.</p>
+                                                <div class="ev-meta">
+                                                        <span><i class="fas fa-calendar"></i> April 28, 2024</span>
+                                                        <span><i class="fas fa-clock"></i> 10:00 AM — 4:00 PM</span>
+                                                        <span><i class="fas fa-map-marker-alt"></i> Uttara, Dhaka</span>
+                                                </div>
+                                                <a href="contact.html">Register Free <i
+                                                                class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                </div>
+
+                                <div class="ev-card">
+                                        <div class="ev-banner"
+                                                style="background:linear-gradient(135deg,#1a5c2a,#27ae60);">🔬</div>
+                                        <div class="ev-body">
+                                                <span class="ev-badge"
+                                                        style="background:rgba(39,174,96,.1);color:#27ae60;"><i
+                                                                class="fas fa-video"></i> Webinar</span>
+                                                <h3>PhD Research Funding Webinar 2024</h3>
+                                                <p>Discover PhD funding opportunities, research positions, and how to
+                                                        write a winning research proposal for top universities
+                                                        worldwide.</p>
+                                                <div class="ev-meta">
+                                                        <span><i class="fas fa-calendar"></i> May 5, 2024</span>
+                                                        <span><i class="fas fa-clock"></i> 8:00 PM (BD Time)</span>
+                                                        <span><i class="fas fa-globe"></i> Online via Zoom</span>
+                                                </div>
+                                                <a href="contact.html">Register Free <i
+                                                                class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                </div>
+
+                                <div class="ev-card">
+                                        <div class="ev-banner"
+                                                style="background:linear-gradient(135deg,#5c1a1a,#E74C3C);">🎒</div>
+                                        <div class="ev-body">
+                                                <span class="ev-badge"
+                                                        style="background:rgba(231,76,60,.1);color:#E74C3C;"><i
+                                                                class="fas fa-passport"></i> Workshop</span>
+                                                <h3>Student Visa Workshop — Success Secrets</h3>
+                                                <p>Hands-on workshop covering the exact documents, SOP writing
+                                                        techniques, and interview tips that give you a 95% visa approval
+                                                        rate.</p>
+                                                <div class="ev-meta">
+                                                        <span><i class="fas fa-calendar"></i> May 18, 2024</span>
+                                                        <span><i class="fas fa-clock"></i> 6:30 PM (BD Time)</span>
+                                                        <span><i class="fas fa-globe"></i> Online via Zoom</span>
+                                                </div>
+                                                <a href="contact.html">Register Free <i
+                                                                class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                </div>
+
+                                <div class="ev-card">
+                                        <div class="ev-banner"
+                                                style="background:linear-gradient(135deg,#5c3a1a,#F39C12);">💰</div>
+                                        <div class="ev-body">
+                                                <span class="ev-badge"
+                                                        style="background:rgba(243,156,18,.1);color:#F39C12;"><i
+                                                                class="fas fa-video"></i> Webinar</span>
+                                                <h3>Study Abroad on a Budget — 2024 Guide</h3>
+                                                <p>Learn how to fund your overseas education through scholarships,
+                                                        part-time work, and smart budgeting strategies from students
+                                                        who've done it.</p>
+                                                <div class="ev-meta">
+                                                        <span><i class="fas fa-calendar"></i> June 2, 2024</span>
+                                                        <span><i class="fas fa-clock"></i> 7:30 PM (BD Time)</span>
+                                                        <span><i class="fas fa-globe"></i> Online via Zoom</span>
+                                                </div>
+                                                <a href="contact.html">Register Free <i
+                                                                class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                </div>
+
+                                <div class="ev-card">
+                                        <div class="ev-banner"
+                                                style="background:linear-gradient(135deg,#1a4a5c,#16a085);">🏆</div>
+                                        <div class="ev-body">
+                                                <span class="ev-badge"
+                                                        style="background:rgba(22,160,133,.1);color:#16a085;"><i
+                                                                class="fas fa-users"></i> Annual</span>
+                                                <h3>WH Doctors Annual Education Conference</h3>
+                                                <p>Our flagship annual event bringing together students, university
+                                                        reps, and education experts for a full-day conference on global
+                                                        education trends.</p>
+                                                <div class="ev-meta">
+                                                        <span><i class="fas fa-calendar"></i> July 2024</span>
+                                                        <span><i class="fas fa-clock"></i> Full Day Event</span>
+                                                        <span><i class="fas fa-map-marker-alt"></i> Dhaka,
+                                                                Bangladesh</span>
+                                                </div>
+                                                <a href="contact.html">Register Interest <i
+                                                                class="fas fa-arrow-right"></i></a>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <!-- Registration Form -->
+                        <div class="webinar-box">
+                                <h2>📩 Register for Next Event</h2>
+                                <p>Fill out this form and we'll send you event details and Zoom link directly to your
+                                        email.</p>
+                                <form class="reg-form">
+                                        <input type="text" placeholder="Your Full Name" required />
+                                        <input type="email" placeholder="Email Address" required />
+                                        <input type="tel" placeholder="WhatsApp Number" />
+                                        <select>
+                                                <option>Select Event</option>
+                                                <option>Malaysia University Fair — April 15</option>
+                                                <option>Study Abroad Seminar Dhaka — April 28</option>
+                                                <option>PhD Research Webinar — May 5</option>
+                                                <option>Visa Workshop — May 18</option>
+                                                <option>Budget Study Abroad — June 2</option>
+                                                <option>Annual Conference — July 2024</option>
+                                        </select>
+                                        <select class="full">
+                                                <option>Which country are you interested in?</option>
+                                                <option>Malaysia</option>
+                                                <option>United Kingdom</option>
+                                                <option>USA</option>
+                                                <option>Canada</option>
+                                                <option>Australia</option>
+                                                <option>Multiple Countries</option>
+                                        </select>
+                                        <button type="submit"><i class="fas fa-paper-plane"></i> Register Now — It's
+                                                Free!</button>
+                                </form>
+                        </div>
+
+                </div>
+        </section>
+
+        <footer class="wh-footer">
+                <div class="footer-grid">
+                        <div class="footer-brand">
+                                <div class="fb-logo"><img src="images/logo white@4x.png" alt="WH Doctors Study Lab" />
+                                </div>
+                                <p>WH Doctors Study Lab Ltd. — Your trusted gateway to global education.</p>
+                                <div class="footer-socials"><a href="https://www.facebook.com/harun.rashid.56884761"
+                                                target="_blank"><i class="fab fa-facebook-f"></i></a><a
+                                                href="https://wa.me/60195686867" target="_blank"><i
+                                                        class="fab fa-whatsapp"></i></a><a
+                                                href="https://web.wechat.com/uklccp" target="_blank"><i
+                                                        class="fab fa-weixin"></i></a><a
+                                                href="https://x.com/harunra15855182" target="_blank"><i
+                                                        class="fab fa-x-twitter"></i></a><a
+                                                href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA"
+                                                target="_blank"><i class="fab fa-youtube"></i></a></div>
+                        </div>
+                        <div class="footer-col">
+                                <h4>Quick Links</h4>
+                                <ul>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="services.html">Our Services</a></li>
+                                        <li><a href="study-abroad.html">Study Abroad</a></li>
+                                        <li><a href="blog.html">Blog & News</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                        </div>
+                        <div class="footer-col">
+                                <h4>Study Destinations</h4>
+                                <ul>
+                                        <li><a href="study-abroad.html">🇲🇾 Malaysia</a></li>
+                                        <li><a href="study-abroad.html">🇬🇧 United Kingdom</a></li>
+                                        <li><a href="study-abroad.html">🇺🇸 USA</a></li>
+                                        <li><a href="study-abroad.html">🇨🇦 Canada</a></li>
+                                        <li><a href="study-abroad.html">🇦🇺 Australia</a></li>
+                                </ul>
+                        </div>
+                        <div class="footer-col">
+                                <h4>Contact Us</h4>
+                                <ul>
+                                        <li><a href="tel:+60195686867"><i class="fas fa-phone"
+                                                                style="color:#F39C12;margin-right:6px;"></i>+60 19-568
+                                                        6867</a></li>
+                                        <li><a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"
+                                                                style="color:#F39C12;margin-right:6px;"></i>harun.sh96@gmail.com</a>
+                                        </li>
+                                        <li><a href="#"><i class="fas fa-map-marker-alt"
+                                                                style="color:#F39C12;margin-right:6px;"></i>Uttara,
+                                                        Dhaka, Bangladesh</a></li>
+                                </ul>
+                        </div>
+                </div>
+                <div class="footer-bottom">
+                        <p>&copy; 2024 WH Doctors Study Lab Ltd. All rights reserved. | Designed by Ashik</p>
+                </div>
+        </footer>
+        <a href="https://wa.me/60195686867" target="_blank" class="float-wa"><i class="fab fa-whatsapp"></i></a>
+</body>
+
+</html>

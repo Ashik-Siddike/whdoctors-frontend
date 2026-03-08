@@ -1,0 +1,144 @@
+.feature-card1-feature-card {
+  gap: var(--dl-space-space-unit);
+  width: 100%;
+  height: var(--dl-size-size-xxlarge);
+  display: flex;
+  padding: var(--dl-space-space-unit);
+  max-width: auto;
+  box-shadow: 5px 5px 10px 0px rgba(18, 18, 18, 0.1);
+  transition: 0.3s;
+  align-items: flex-start;
+  border-radius: 4px;
+  flex-direction: column;
+  background-size: cover;
+  justify-content: center;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.5) 51.00%,rgba(149, 58, 17, 0.7) 100.00%),url("https://play.teleporthq.io/static/svg/default-img.svg");
+}
+.feature-card1-feature-card:hover {
+  transform: scale(1.02);
+  background-image: linear-gradient(180deg, rgba(1, 38, 64, 0.5) 50.00%,rgba(149, 58, 17, 0.35) 100.00%),url("https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDIyfHxiYWNrZ3JvdW5kfGVufDB8fHx8MTY5MDk4MzgxNHww&ixlib=rb-4.0.3&w=1500");
+}
+.feature-card1-text {
+  color: var(--dl-color-gray-white);
+  font-size: 2rem;
+  line-height: 1;
+}
+.feature-card1-container {
+  gap: var(--dl-space-space-halfunit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.feature-card1-text1 {
+  color: #ed7427ff;
+  font-size: 1.2rem;
+}
+.feature-card1-text2 {
+  color: #ed7427ff;
+  font-size: 1.2rem;
+}
+.feature-card1-root-class-name {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1605470207062-b72b5cbe2a87?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDF8fFVLJTIwdW5pdmVyc2l0eXxlbnwwfHx8fDE2OTI1MDU4MDN8MA&ixlib=rb-4.0.3&w=400");
+}
+.feature-card1-root-class-name1 {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1641160616553-a9d21a846e49?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fFVzYSUyMHVuaXZlcnNpdHl8ZW58MHx8fHwxNjkyNTA1ODE3fDA&ixlib=rb-4.0.3&w=400");
+}
+.feature-card1-root-class-name2 {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1604295960967-036b436f0b34?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDEzfHxtYWxheXNpYSUyMHVuaXZlcnNpdHl8ZW58MHx8fHwxNjkyNTA1NzI0fDA&ixlib=rb-4.0.3&w=400");
+  background-position: top left,top;
+}
+.feature-card1-root-class-name3 {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1630769685019-8051d58adc76?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDF8fENhbmFkYSUyMHVuaXZlcnNpdHl8ZW58MHx8fHwxNjkyNTA1NzgwfDA&ixlib=rb-4.0.3&w=400");
+}
+.feature-card1-root-class-name4 {
+  width: 85%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1577931683033-1059552104e0?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE3fHxNYWxheXNpYXxlbnwwfHx8fDE2OTA5ODI5NjV8MA&ixlib=rb-4.0.3&w=1500");
+  background-position: top left,center;
+}
+.feature-card1-root-class-name5 {
+  width: 85%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1465414951857-102134ffaa57?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDM4fHxkdWJhaXxlbnwwfHx8fDE2OTA5ODMwMjN8MA&ixlib=rb-4.0.3&w=1500");
+}
+.feature-card1-root-class-name6 {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1641160616553-a9d21a846e49?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fFVzYSUyMHVuaXZlcnNpdHl8ZW58MHx8fHwxNjkyNTA1ODE3fDA&ixlib=rb-4.0.3&w=400");
+}
+.feature-card1-root-class-name7 {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1641160616553-a9d21a846e49?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fFVzYSUyMHVuaXZlcnNpdHl8ZW58MHx8fHwxNjkyNTA1ODE3fDA&ixlib=rb-4.0.3&w=400");
+}
+.feature-card1-root-class-name8 {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1641160616553-a9d21a846e49?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fFVzYSUyMHVuaXZlcnNpdHl8ZW58MHx8fHwxNjkyNTA1ODE3fDA&ixlib=rb-4.0.3&w=400");
+}
+.feature-card1-root-class-name9 {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1641160616553-a9d21a846e49?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fFVzYSUyMHVuaXZlcnNpdHl8ZW58MHx8fHwxNjkyNTA1ODE3fDA&ixlib=rb-4.0.3&w=400");
+}
+.feature-card1-root-class-name10 {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1604295960967-036b436f0b34?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDEzfHxtYWxheXNpYSUyMHVuaXZlcnNpdHl8ZW58MHx8fHwxNjkyNTA1NzI0fDA&ixlib=rb-4.0.3&w=400");
+  background-position: top left,top;
+}
+.feature-card1-root-class-name11 {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1630769685019-8051d58adc76?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDF8fENhbmFkYSUyMHVuaXZlcnNpdHl8ZW58MHx8fHwxNjkyNTA1NzgwfDA&ixlib=rb-4.0.3&w=400");
+}
+.feature-card1-root-class-name12 {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1605470207062-b72b5cbe2a87?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDF8fFVLJTIwdW5pdmVyc2l0eXxlbnwwfHx8fDE2OTI1MDU4MDN8MA&ixlib=rb-4.0.3&w=400");
+}
+.feature-card1-root-class-name13 {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1641160616553-a9d21a846e49?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fFVzYSUyMHVuaXZlcnNpdHl8ZW58MHx8fHwxNjkyNTA1ODE3fDA&ixlib=rb-4.0.3&w=400");
+}
+.feature-card1-root-class-name14 {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1641160616553-a9d21a846e49?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fFVzYSUyMHVuaXZlcnNpdHl8ZW58MHx8fHwxNjkyNTA1ODE3fDA&ixlib=rb-4.0.3&w=400");
+}
+.feature-card1-root-class-name15 {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1641160616553-a9d21a846e49?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fFVzYSUyMHVuaXZlcnNpdHl8ZW58MHx8fHwxNjkyNTA1ODE3fDA&ixlib=rb-4.0.3&w=400");
+}
+.feature-card1-root-class-name16 {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1641160616553-a9d21a846e49?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fFVzYSUyMHVuaXZlcnNpdHl8ZW58MHx8fHwxNjkyNTA1ODE3fDA&ixlib=rb-4.0.3&w=400");
+}
+.feature-card1-root-class-name17 {
+  width: 100%;
+  background-image: radial-gradient(circle at center, rgba(1, 38, 64, 0.6) 69.00%,rgba(149, 58, 17, 0.39) 100.00%),url("https://images.unsplash.com/photo-1641160616553-a9d21a846e49?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDZ8fFVzYSUyMHVuaXZlcnNpdHl8ZW58MHx8fHwxNjkyNTA1ODE3fDA&ixlib=rb-4.0.3&w=400");
+}
+@media(max-width: 1200px) {
+  .feature-card1-feature-card {
+    height: var(--dl-size-size-large);
+  }
+  .feature-card1-text {
+    font-size: 1.2rem;
+  }
+  .feature-card1-text1 {
+    font-size: 0.8rem;
+  }
+  .feature-card1-text2 {
+    font-size: 0.8rem;
+  }
+}
+@media(max-width: 991px) {
+  .feature-card1-feature-card {
+    height: 192px;
+    padding: var(--dl-space-space-unit);
+  }
+  .feature-card1-text {
+    font-size: 1.5rem;
+  }
+  .feature-card1-text1 {
+    font-size: 0.8rem;
+  }
+  .feature-card1-text2 {
+    font-size: 0.8rem;
+  }
+}

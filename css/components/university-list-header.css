@@ -1,0 +1,224 @@
+.university-list-header-container {
+  gap: var(--dl-space-space-unit);
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-newtheme-green);
+  border-width: 1px;
+  padding-bottom: var(--dl-space-space-unit);
+  background-color: var(--dl-color-newtheme-3rd);
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+.university-list-header-container1 {
+  flex: 0 0 auto;
+  width: 10%;
+  height: auto;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  border-color: var(--dl-color-newtheme-green);
+  border-width: 1px;
+  flex-direction: column;
+  justify-content: center;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+}
+.university-list-header-text {
+  text-align: center;
+  text-transform: uppercase;
+}
+.university-list-header-container2 {
+  flex: 0 0 auto;
+  width: 16%;
+  height: auto;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  border-color: var(--dl-color-newtheme-green);
+  border-width: 1px;
+  padding-left: var(--dl-space-space-unit);
+  flex-direction: column;
+  justify-content: center;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+}
+.university-list-header-text01 {
+  font-size: 16px;
+  font-style: normal;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.university-list-header-container3 {
+  flex: 0 0 auto;
+  width: 16%;
+  height: auto;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  border-color: var(--dl-color-newtheme-green);
+  border-width: 1px;
+  flex-direction: column;
+  justify-content: center;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+}
+.university-list-header-text02 {
+  font-size: 16px;
+  font-style: normal;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.university-list-header-container4 {
+  flex: 0 0 auto;
+  width: 10%;
+  height: auto;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  border-color: var(--dl-color-newtheme-green);
+  border-width: 1px;
+  flex-direction: column;
+  justify-content: center;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+}
+.university-list-header-text03 {
+  font-size: 16px;
+  font-style: normal;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.university-list-header-container5 {
+  flex: 0 0 auto;
+  width: 10%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  align-items: flex-start;
+  border-color: var(--dl-color-newtheme-green);
+  border-width: 1px;
+  flex-direction: column;
+  justify-content: center;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+}
+.university-list-header-text04 {
+  font-size: 16px;
+  font-style: normal;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.university-list-header-container6 {
+  flex: 0 0 auto;
+  width: 10%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  align-items: flex-start;
+  border-color: var(--dl-color-newtheme-green);
+  border-width: 1px;
+  flex-direction: column;
+  justify-content: center;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+}
+.university-list-header-text05 {
+  font-size: 16px;
+  font-style: normal;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.university-list-header-container7 {
+  flex: 0 0 auto;
+  width: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  align-items: flex-start;
+  border-color: var(--dl-color-newtheme-green);
+  border-width: 1px;
+  flex-direction: column;
+  justify-content: center;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+}
+.university-list-header-text06 {
+  font-size: 16px;
+  font-style: normal;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.university-list-header-container8 {
+  flex: 0 0 auto;
+  width: 10%;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.university-list-header-text09 {
+  font-size: 16px;
+  font-style: normal;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1600px) {
+  .university-list-header-text01 {
+    font-size: 14px;
+  }
+  .university-list-header-text02 {
+    font-size: 14px;
+  }
+  .university-list-header-text03 {
+    font-size: 14px;
+  }
+  .university-list-header-text04 {
+    font-size: 14px;
+  }
+  .university-list-header-text05 {
+    font-size: 14px;
+  }
+  .university-list-header-text06 {
+    font-size: 14px;
+  }
+  .university-list-header-text09 {
+    font-size: 14px;
+  }
+}

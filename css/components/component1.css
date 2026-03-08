@@ -1,0 +1,147 @@
+.component1-container {
+  gap: var(--dl-space-space-unit);
+  flex: 0 0 auto;
+  width: 50%;
+  display: flex;
+  padding: var(--dl-space-space-unit);
+  position: relative;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+}
+.component1-container1 {
+  flex: 0 0 auto;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-self: flex-start;
+  margin-top: var(--dl-space-space-unit);
+  align-items: center;
+  border-radius: 50px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-newtheme-base);
+}
+.component1-container2 {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.component1-icon {
+  fill: var(--dl-color-newtheme-white);
+  height: 36px;
+}
+.component1-container3 {
+  gap: var(--dl-space-space-halfunit);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.component1-text {
+  color: var(--dl-color-newtheme-2nd);
+  font-size: 1.5em;
+}
+.component1-text1 {
+  font-size: 14px;
+  text-align: justify;
+  line-height: 1.5;
+}
+.component1-root-class-name {
+  width: 48%;
+}
+.component1-root-class-name1 {
+  width: 48%;
+}
+.component1-root-class-name2 {
+  width: 48%;
+}
+.component1-root-class-name3 {
+  width: 48%;
+}
+.component1-root-class-name4 {
+  width: 48%;
+}
+.component1-root-class-name5 {
+  width: 48%;
+}
+.component1-root-class-name6 {
+  width: 48%;
+}
+.component1-root-class-name7 {
+  width: 48%;
+}
+.component1-root-class-name8 {
+  width: 48%;
+}
+.component1-root-class-name9 {
+  width: 48%;
+}
+.component1-root-class-name10 {
+  width: 48%;
+}
+.component1-root-class-name11 {
+  width: 48%;
+}
+.component1-root-class-name12 {
+  width: 48%;
+}
+.component1-root-class-name13 {
+  width: 48%;
+}
+.component1-root-class-name14 {
+  width: 48%;
+}
+.component1-root-class-name15 {
+  width: 48%;
+}
+.component1-root-class-name16 {
+  width: 48%;
+}
+.component1-root-class-name17 {
+  width: 48%;
+}
+@media(max-width: 991px) {
+  .component1-container1 {
+    width: 60px;
+    height: 60px;
+  }
+  .component1-text {
+    font-size: 1.2em;
+  }
+}
+@media(max-width: 767px) {
+  .component1-container {
+    gap: var(--dl-space-space-halfunit);
+    padding: var(--dl-space-space-halfunit);
+  }
+  .component1-container1 {
+    width: 50px;
+    height: 50px;
+  }
+  .component1-icon {
+    height: 30px;
+  }
+}
+@media(max-width: 479px) {
+  .component1-root-class-name6 {
+    width: 100%;
+  }
+  .component1-root-class-name7 {
+    width: 100%;
+  }
+  .component1-root-class-name8 {
+    width: 100%;
+  }
+  .component1-root-class-name9 {
+    width: 100%;
+  }
+  .component1-root-class-name10 {
+    width: 100%;
+  }
+  .component1-root-class-name11 {
+    width: 100%;
+  }
+}

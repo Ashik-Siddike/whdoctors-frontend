@@ -1,0 +1,22 @@
+{
+  "resources/css/admin/assets/scss/style.scss": {
+    "file": "assets/style-babb99cf.css",
+    "isEntry": true,
+    "src": "resources/css/admin/assets/scss/style.scss"
+  },
+  "resources/css/admin/assets/scss/table.scss": {
+    "file": "assets/table-8578c3fc.css",
+    "isEntry": true,
+    "src": "resources/css/admin/assets/scss/table.scss"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-9b5b8b80.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-63bb58ea.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  }
+}

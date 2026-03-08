@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { orange: '#F39C12', red: '#E74C3C', blue: '#5DADE2', dark: '#2C3E50', text: '#34495E' }
+                    },
+                    fontFamily: { sora: ['Sora', 'sans-serif'], inter: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Abroad Living Guide - WH Doctors Study Lab Ltd.</title>
+    <meta name="description"
+        content="Your complete guide to living abroad as a student — accommodation, culture, food, and student life tips from WH Doctors Study Lab." />
+    <link rel="icon" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/home-redesign.css" />
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #1a3a5c 0%, #2193b0 50%, #6dd5ed 100%);
+            padding: 100px 20px 70px;
+            text-align: center;
+            color: white;
+        }
+
+        .page-hero h1 {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 900;
+            margin-bottom: 14px;
+        }
+
+        .page-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+
+        /* Abroad Section */
+        .abroad-section {
+            padding: 70px 20px 100px;
+            background: #f8f9fa;
+        }
+
+        .abroad-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Section heading */
+        .section-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-heading h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            font-weight: 900;
+            color: #2C3E50;
+        }
+
+        .section-heading .underline-bar {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(135deg, #F39C12, #E74C3C);
+            border-radius: 2px;
+            margin: 14px auto 0;
+        }
+
+        .section-heading p {
+            color: #727272;
+            margin-top: 14px;
+            font-size: 1rem;
+        }
+
+        /* Category Cards */
+        .abroad-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 28px;
+        }
+
+        .abroad-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .abroad-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.13);
+        }
+
+        .abroad-card-header {
+            padding: 30px 28px 20px;
+            background: linear-gradient(135deg, #1a3a5c, #2193b0);
+            color: white;
+        }
+
+        .abroad-card-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .abroad-card-header h3 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 900;
+            margin-bottom: 6px;
+        }
+
+        .abroad-card-header p {
+            font-size: 0.88rem;
+            opacity: 0.85;
+        }
+
+        .abroad-card-body {
+            padding: 24px 28px;
+        }
+
+        .abroad-card-body ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .abroad-card-body ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .abroad-card-body ul li:last-child {
+            border-bottom: none;
+        }
+
+        .abroad-card-body ul li i {
+            color: #2193b0;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        /* Tips Section */
+        .tips-section {
+            margin-top: 70px;
+        }
+
+        .tips-section h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            font-weight: 900;
+            color: #2C3E50;
+            text-align: center;
+            margin-bottom: 14px;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .tip-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .tip-icon {
+            font-size: 40px;
+            margin-bottom: 14px;
+        }
+
+        .tip-card h4 {
+            font-family: 'Sora', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #2C3E50;
+            margin-bottom: 10px;
+        }
+
+        .tip-card p {
+            font-size: 0.88rem;
+            color: #727272;
+            line-height: 1.65;
+        }
+
+        /* CTA Banner */
+        .cta-abroad {
+            background: linear-gradient(135deg, #1a3a5c, #E74C3C);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+            border-radius: 24px;
+        }
+
+        .cta-abroad h2 {
+            font-family: 'Sora', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 14px;
+        }
+
+        .cta-abroad p {
+            font-size: 1rem;
+            opacity: 0.85;
+            max-width: 520px;
+            margin: 0 auto 28px;
+        }
+
+        .cta-abroad-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-abroad-btns a {
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .cta-abroad-btns .btn-w {
+            background: white;
+            color: #1a3a5c;
+        }
+
+        .cta-abroad-btns .btn-o {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .cta-abroad-btns a:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== TOP ACTION BAR ===== -->
+    <div class="wh-topbar">
+        <div class="wh-topbar-inner">
+            <div class="wh-topbar-left">
+                <span><i class="fas fa-map-marker-alt"></i> House 44, Road 11, Sector 13, Uttara, Dhaka-1230</span>
+                <a href="tel:+60195686867"><i class="fas fa-phone"></i> +60 19-568 6867</a>
+                <a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"></i> harun.sh96@gmail.com</a>
+            </div>
+            <div class="wh-topbar-right">
+                <a href="https://www.facebook.com/harun.rashid.56884761" target="_blank" title="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://web.wechat.com/uklccp" target="_blank" title="WeChat"><i class="fab fa-weixin"></i></a>
+                <a href="https://wa.me/60195686867" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://x.com/harunra15855182" target="_blank" title="Twitter/X"><i
+                        class="fab fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA" target="_blank" title="YouTube"><i
+                        class="fab fa-youtube"></i></a>
+                <div class="wh-topbar-cta">
+                    <a href="appointment.html" class="btn-top-outline"><i class="fas fa-calendar-check"></i> Book
+                        Session</a>
+                    <a href="contact.html" class="btn-top-primary"><i class="fas fa-paper-plane"></i> Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== STICKY BOTTOM NAVBAR ===== -->
+    <nav class="wh-bottom-nav" id="bottomNav">
+        <a href="index.html" class="bottom-nav-link">
+            <i class="fas fa-home"></i><span>Home</span>
+        </a>
+        <a href="about.html" class="bottom-nav-link">
+            <i class="fas fa-info-circle"></i><span>About</span>
+        </a>
+        <a href="study-abroad.html" class="bottom-nav-link active">
+            <i class="fas fa-graduation-cap"></i><span>Study Abroad</span>
+        </a>
+        <a href="index.html" class="bottom-nav-logo">
+            <div class="bnl-img-wrap">
+                <img src="images/wh logo@4x-600w.png" alt="WH Doctors" />
+            </div>
+        </a>
+        <a href="services.html" class="bottom-nav-link">
+            <i class="fas fa-cogs"></i><span>Services</span>
+        </a>
+        <a href="conference.html" class="bottom-nav-link">
+            <i class="fas fa-chalkboard-teacher"></i><span>Conference</span>
+        </a>
+        <a href="contact.html" class="bottom-nav-link">
+            <i class="fas fa-envelope"></i><span>Contact</span>
+        </a>
+    </nav>
+
+    <!-- ===== PAGE HERO ===== -->
+    <div class="page-hero">
+        <h1>🌍 Life Abroad — Complete Living Guide</h1>
+        <p>Everything you need to know about student life, accommodation, culture, and daily living in your study
+            destination.</p>
+    </div>
+
+    <!-- ===== ABROAD SECTION ===== -->
+    <section class="abroad-section">
+        <div class="abroad-container">
+
+            <div class="section-heading">
+                <h2>Living Abroad as a Student</h2>
+                <div class="underline-bar"></div>
+                <p>WH Doctors guides you through every aspect of student life abroad — from finding a home to settling
+                    in your new country</p>
+            </div>
+
+            <!-- Category Cards -->
+            <div class="abroad-grid">
+
+                <div class="abroad-card">
+                    <div class="abroad-card-header">
+                        <div class="abroad-card-icon">🏠</div>
+                        <h3>Accommodation</h3>
+                        <p>Finding suitable housing is your first priority when moving abroad</p>
+                    </div>
+                    <div class="abroad-card-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> On-campus university dormitories (cheapest option)
+                            </li>
+                            <li><i class="fas fa-check-circle"></i> Off-campus shared apartments with other students
+                            </li>
+                            <li><i class="fas fa-check-circle"></i> Private studio apartments for independence</li>
+                            <li><i class="fas fa-check-circle"></i> Homestay programs with local families</li>
+                            <li><i class="fas fa-check-circle"></i> Student-specific residential complexes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="abroad-card">
+                    <div class="abroad-card-header" style="background: linear-gradient(135deg, #1a5c2a, #27ae60);">
+                        <div class="abroad-card-icon">💰</div>
+                        <h3>Monthly Budget Planning</h3>
+                        <p>Managing your finances effectively is key to a stress-free student life</p>
+                    </div>
+                    <div class="abroad-card-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle" style="color:#27ae60;"></i> Rent: RM 400–900/month
+                                (Malaysia)</li>
+                            <li><i class="fas fa-check-circle" style="color:#27ae60;"></i> Food & groceries: RM
+                                400–600/month</li>
+                            <li><i class="fas fa-check-circle" style="color:#27ae60;"></i> Transportation: RM
+                                100–200/month</li>
+                            <li><i class="fas fa-check-circle" style="color:#27ae60;"></i> Utilities & internet: RM
+                                100–150/month</li>
+                            <li><i class="fas fa-check-circle" style="color:#27ae60;"></i> Entertainment & misc: RM
+                                200–400/month</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="abroad-card">
+                    <div class="abroad-card-header" style="background: linear-gradient(135deg, #6a1a5c, #e74c3c);">
+                        <div class="abroad-card-icon">🍜</div>
+                        <h3>Food & Cuisine</h3>
+                        <p>Explore new cuisines while maintaining healthy eating habits on a budget</p>
+                    </div>
+                    <div class="abroad-card-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle" style="color:#e74c3c;"></i> University canteen meals are
+                                affordable</li>
+                            <li><i class="fas fa-check-circle" style="color:#e74c3c;"></i> Local hawker food and food
+                                courts</li>
+                            <li><i class="fas fa-check-circle" style="color:#e74c3c;"></i> Supermarket cooking saves
+                                money</li>
+                            <li><i class="fas fa-check-circle" style="color:#e74c3c;"></i> Halal food widely available
+                                in Malaysia</li>
+                            <li><i class="fas fa-check-circle" style="color:#e74c3c;"></i> International cuisine
+                                restaurants accessible</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="abroad-card">
+                    <div class="abroad-card-header" style="background: linear-gradient(135deg, #1a4a6c, #F39C12);">
+                        <div class="abroad-card-icon">🚌</div>
+                        <h3>Transportation</h3>
+                        <p>Getting around your new city efficiently and affordably</p>
+                    </div>
+                    <div class="abroad-card-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle" style="color:#F39C12;"></i> University shuttle buses
+                                (often free)</li>
+                            <li><i class="fas fa-check-circle" style="color:#F39C12;"></i> Public buses and LRT/MRT
+                                trains</li>
+                            <li><i class="fas fa-check-circle" style="color:#F39C12;"></i> Grab/ride-hailing apps for
+                                convenience</li>
+                            <li><i class="fas fa-check-circle" style="color:#F39C12;"></i> Student discount cards for
+                                transport</li>
+                            <li><i class="fas fa-check-circle" style="color:#F39C12;"></i> Cycling is popular in some
+                                campuses</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="abroad-card">
+                    <div class="abroad-card-header" style="background: linear-gradient(135deg, #2c1a6c, #8e44ad);">
+                        <div class="abroad-card-icon">🌐</div>
+                        <h3>Culture & Social Life</h3>
+                        <p>Adapting to a new culture and building your international network</p>
+                    </div>
+                    <div class="abroad-card-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle" style="color:#8e44ad;"></i> Join international student
+                                clubs</li>
+                            <li><i class="fas fa-check-circle" style="color:#8e44ad;"></i> Attend cultural festivals and
+                                events</li>
+                            <li><i class="fas fa-check-circle" style="color:#8e44ad;"></i> Language exchange programs
+                            </li>
+                            <li><i class="fas fa-check-circle" style="color:#8e44ad;"></i> Network with peers from 100+
+                                countries</li>
+                            <li><i class="fas fa-check-circle" style="color:#8e44ad;"></i> Respect local customs and
+                                traditions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="abroad-card">
+                    <div class="abroad-card-header" style="background: linear-gradient(135deg, #1a5c4a, #16a085);">
+                        <div class="abroad-card-icon">🏥</div>
+                        <h3>Health & Safety</h3>
+                        <p>Staying healthy and safe is essential for a successful study experience</p>
+                    </div>
+                    <div class="abroad-card-body">
+                        <ul>
+                            <li><i class="fas fa-check-circle" style="color:#16a085;"></i> Student health insurance is
+                                mandatory</li>
+                            <li><i class="fas fa-check-circle" style="color:#16a085;"></i> University health clinics
+                                available</li>
+                            <li><i class="fas fa-check-circle" style="color:#16a085;"></i> Mental health support
+                                services</li>
+                            <li><i class="fas fa-check-circle" style="color:#16a085;"></i> Emergency contact list always
+                                ready</li>
+                            <li><i class="fas fa-check-circle" style="color:#16a085;"></i> Know the local emergency
+                                numbers</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tips Section -->
+            <div class="tips-section">
+                <h2>🌟 Top Tips for New International Students</h2>
+                <div
+                    style="width:60px;height:4px;background:linear-gradient(135deg,#F39C12,#E74C3C);border-radius:2px;margin:14px auto 0;">
+                </div>
+
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">📋</div>
+                        <h4>Prepare Documents Early</h4>
+                        <p>Keep copies of all important documents — passport, visa, enrolment letter, insurance cards —
+                            both physical and digital.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">💳</div>
+                        <h4>Open a Local Bank Account</h4>
+                        <p>Open a local bank account as soon as you arrive to avoid high international transaction fees
+                            and simplify payments.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">📱</div>
+                        <h4>Get a Local SIM Card</h4>
+                        <p>A local prepaid SIM card will save you money on calls and provide affordable data for maps
+                            and communication.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">👥</div>
+                        <h4>Connect with Other Students</h4>
+                        <p>Join student WhatsApp groups and Facebook pages from your university to get tips and find
+                            friends quickly.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">🗓️</div>
+                        <h4>Organize Your Study Schedule</h4>
+                        <p>Balance academics with social activities. Use a planner or digital calendar to manage
+                            assignments, exams, and events.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">🆘</div>
+                        <h4>Know Your Embassy Contacts</h4>
+                        <p>Save your home country's embassy contact details. They are your first point of contact in
+                            emergencies abroad.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="cta-abroad">
+                <h2>Ready to Live Your Abroad Dream?</h2>
+                <p>Let WH Doctors guide you through every step — from university selection to settling in your new home
+                    country.</p>
+                <div class="cta-abroad-btns">
+                    <a href="contact.html" class="btn-w">📞 Book Free Consultation</a>
+                    <a href="study-abroad.html" class="btn-o">🌍 Explore Destinations</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="wh-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="fb-logo">
+                    <img src="images/logo white@4x.png" alt="WH Doctors Study Lab" />
+                </div>
+                <p>WH Doctors Study Lab Ltd. — Your trusted gateway to global education. Free counselling, visa support
+                    & PhD mentoring for students worldwide.</p>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/harun.rashid.56884761" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/60195686867" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://web.wechat.com/uklccp" target="_blank"><i class="fab fa-weixin"></i></a>
+                    <a href="https://x.com/harunra15855182" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="study-abroad.html">Study Abroad</a></li>
+                    <li><a href="blog.html">Blog & News</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Study Destinations</h4>
+                <ul>
+                    <li><a href="study-abroad.html">🇲🇾 Malaysia</a></li>
+                    <li><a href="study-abroad.html">🇬🇧 United Kingdom</a></li>
+                    <li><a href="study-abroad.html">🇺🇸 USA</a></li>
+                    <li><a href="study-abroad.html">🇨🇦 Canada</a></li>
+                    <li><a href="study-abroad.html">🇦🇺 Australia</a></li>
+                    <li><a href="study-abroad.html">🇪🇺 Europe</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><a href="tel:+60195686867"><i class="fas fa-phone"
+                                style="color:#F39C12; margin-right:6px;"></i>+60 19-568 6867</a></li>
+                    <li><a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"
+                                style="color:#F39C12; margin-right:6px;"></i>harun.sh96@gmail.com</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"
+                                style="color:#F39C12; margin-right:6px;"></i>Uttara, Dhaka, Bangladesh</a></li>
+                    <li><a href="#"><i class="fas fa-map-marker-alt"
+                                style="color:#F39C12; margin-right:6px;"></i>Serdang, Selangor, Malaysia</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 WH Doctors Study Lab Ltd. All rights reserved. | Designed by Ashik</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/60195686867" target="_blank" class="float-wa" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('visible'), i * 60);
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0 });
+        revealEls.forEach(el => revealObserver.observe(el));
+    </script>
+
+</body>
+
+</html>

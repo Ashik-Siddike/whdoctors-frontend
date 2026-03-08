@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - WH Doctors Study Lab Ltd.</title>
+  <meta name="description"
+    content="Contact WH Doctors Study Lab — get free overseas education counselling via phone, WhatsApp, email, or visit us in Dhaka or Malaysia." />
+  <link rel="icon" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800;900&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/home-redesign.css" />
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, #2C3E50, #27ae60);
+      padding: 100px 20px 60px;
+      text-align: center;
+      color: white;
+    }
+
+    .page-hero h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .page-hero p {
+      font-size: 1.05rem;
+      opacity: .85;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .sec {
+      padding: 70px 20px 100px;
+      background: #f8f9fa;
+    }
+
+    .con {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media(max-width:900px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Form */
+    .contact-form-box {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .07);
+    }
+
+    .contact-form-box h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #2C3E50;
+      margin-bottom: 8px;
+    }
+
+    .contact-form-box p {
+      color: #727272;
+      margin-bottom: 28px;
+      font-size: .9rem;
+    }
+
+    .cf {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .cf input,
+    .cf select,
+    .cf textarea {
+      padding: 13px 16px;
+      border: 2px solid #e8e8e8;
+      border-radius: 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: .9rem;
+      outline: none;
+      transition: border .2s;
+      width: 100%;
+    }
+
+    .cf input:focus,
+    .cf select:focus,
+    .cf textarea:focus {
+      border-color: #F39C12;
+    }
+
+    .cf textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .cf button {
+      background: linear-gradient(135deg, #F39C12, #E74C3C);
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: 1rem;
+      cursor: pointer;
+      font-family: 'Sora', sans-serif;
+      transition: transform .2s;
+    }
+
+    .cf button:hover {
+      transform: scale(1.02);
+    }
+
+    /* Info Cards */
+    .info-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .info-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .06);
+    }
+
+    .info-card h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 1rem;
+      font-weight: 900;
+      color: #2C3E50;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .contact-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .ci-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #F39C12, #E74C3C);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .ci-text h5 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: #2C3E50;
+      margin-bottom: 3px;
+    }
+
+    .ci-text a,
+    .ci-text span {
+      font-size: .83rem;
+      color: #727272;
+      text-decoration: none;
+    }
+
+    .ci-text a:hover {
+      color: #E74C3C;
+    }
+
+    /* WhatsApp CTA */
+    .wa-card {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      color: white;
+    }
+
+    .wa-card i {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .wa-card h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .wa-card p {
+      font-size: .85rem;
+      opacity: .9;
+      margin-bottom: 16px;
+    }
+
+    .wa-card a {
+      display: inline-block;
+      background: white;
+      color: #128C7E;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: .9rem;
+      text-decoration: none;
+      transition: transform .2s;
+    }
+
+    .wa-card a:hover {
+      transform: scale(1.04);
+    }
+
+    /* Office hours */
+    .hours-line {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #f5f5f5;
+      font-size: .85rem;
+    }
+
+    .hours-line:last-child {
+      border-bottom: none;
+    }
+
+    .hours-line .day {
+      color: #2C3E50;
+      font-weight: 600;
+    }
+
+    .hours-line .time {
+      color: #F39C12;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wh-topbar">
+    <div class="wh-topbar-inner">
+      <div class="wh-topbar-left">
+        <span><i class="fas fa-map-marker-alt"></i> House 44, Road 11, Sector 13, Uttara, Dhaka-1230</span>
+        <a href="tel:+60195686867"><i class="fas fa-phone"></i> +60 19-568 6867</a>
+        <a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"></i> harun.sh96@gmail.com</a>
+      </div>
+      <div class="wh-topbar-right">
+        <a href="https://www.facebook.com/harun.rashid.56884761" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://web.wechat.com/uklccp" target="_blank"><i class="fab fa-weixin"></i></a>
+        <a href="https://wa.me/60195686867" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://x.com/harunra15855182" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA" target="_blank"><i
+            class="fab fa-youtube"></i></a>
+        <div class="wh-topbar-cta">
+          <a href="appointment.html" class="btn-top-outline"><i class="fas fa-calendar-check"></i> Book Session</a>
+          <a href="contact.html" class="btn-top-primary"><i class="fas fa-paper-plane"></i> Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="wh-bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="about.html" class="bottom-nav-link"><i class="fas fa-info-circle"></i><span>About</span></a>
+    <a href="study-abroad.html" class="bottom-nav-link"><i class="fas fa-graduation-cap"></i><span>Study
+        Abroad</span></a>
+    <a href="index.html" class="bottom-nav-logo">
+      <div class="bnl-img-wrap"><img src="images/wh logo@4x-600w.png" alt="WH Doctors" /></div>
+    </a>
+    <a href="services.html" class="bottom-nav-link"><i class="fas fa-cogs"></i><span>Services</span></a>
+    <a href="conference.html" class="bottom-nav-link"><i
+        class="fas fa-chalkboard-teacher"></i><span>Conference</span></a>
+    <a href="contact.html" class="bottom-nav-link active"><i class="fas fa-envelope"></i><span>Contact</span></a>
+  </nav>
+
+  <div class="page-hero">
+    <h1>📞 Contact Us</h1>
+    <p>Get your FREE overseas education consultation today. We're here to answer every question and guide you step by
+      step.</p>
+  </div>
+
+  <section class="sec">
+    <div class="con">
+      <div class="contact-layout">
+
+        <!-- Contact Form -->
+        <div class="contact-form-box">
+          <h2>Send Us a Message</h2>
+          <p>Fill out the form and our counsellors will respond within 24 hours. All consultations are completely FREE.
+          </p>
+          <form class="cf" id="contactForm" action="contact" method="POST">
+            <input type="text" name="name" placeholder="Your Full Name" required />
+            <input type="email" name="email" placeholder="Email Address" required />
+            <input type="tel" name="phone" placeholder="WhatsApp / Phone Number" />
+            <select name="country">
+              <option value="">Which country do you want to study in?</option>
+              <option>Malaysia</option>
+              <option>United Kingdom</option>
+              <option>USA</option>
+              <option>Canada</option>
+              <option>Australia</option>
+              <option>Not decided yet</option>
+            </select>
+            <select name="level">
+              <option value="">Study Level</option>
+              <option>Bachelor's Degree</option>
+              <option>Master's Degree</option>
+              <option>PhD / Research</option>
+              <option>Diploma / Foundation</option>
+            </select>
+            <textarea name="message" placeholder="Your message or question (optional)"></textarea>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Send Message — It's Free!</button>
+          </form>
+        </div>
+
+        <!-- Info Sidebar -->
+        <div class="info-sidebar">
+
+          <!-- WhatsApp CTA -->
+          <div class="wa-card">
+            <i class="fab fa-whatsapp"></i>
+            <h4>Chat on WhatsApp</h4>
+            <p>Get instant replies! Our team is available on WhatsApp 10 AM – 8 PM daily.</p>
+            <a href="https://wa.me/60195686867" target="_blank">💬 Open WhatsApp</a>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="info-card">
+            <h4>📍 Contact Information</h4>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-phone"></i></div>
+              <div class="ci-text">
+                <h5>Phone / WhatsApp</h5><a href="tel:+60195686867">+60 19-568 6867</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-envelope"></i></div>
+              <div class="ci-text">
+                <h5>Email Address</h5><a href="mailto:harun.sh96@gmail.com">harun.sh96@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="ci-text">
+                <h5>Bangladesh Office</h5><span>House 44, Road 11, Sector 13, Uttara, Dhaka-1230</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="ci-text">
+                <h5>Malaysia Office</h5><span>Serdang, Selangor, Malaysia</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Office Hours -->
+          <div class="info-card">
+            <h4>🕐 Office Hours</h4>
+            <div class="hours-line"><span class="day">Saturday – Thursday</span><span class="time">10 AM – 6 PM</span>
+            </div>
+            <div class="hours-line"><span class="day">Friday</span><span class="time">2 PM – 6 PM</span></div>
+            <div class="hours-line"><span class="day">WhatsApp</span><span class="time">10 AM – 8 PM</span></div>
+            <div class="hours-line"><span class="day">Emergency</span><span class="time">24/7 WhatsApp</span></div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="info-card">
+            <h4>🌐 Follow Us</h4>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <a href="https://www.facebook.com/harun.rashid.56884761" target="_blank"
+                style="width:42px;height:42px;border-radius:10px;background:#1877f2;display:flex;align-items:center;justify-content:center;color:white;font-size:16px;"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a href="https://wa.me/60195686867" target="_blank"
+                style="width:42px;height:42px;border-radius:10px;background:#25D366;display:flex;align-items:center;justify-content:center;color:white;font-size:16px;"><i
+                  class="fab fa-whatsapp"></i></a>
+              <a href="https://web.wechat.com/uklccp" target="_blank"
+                style="width:42px;height:42px;border-radius:10px;background:#09b83e;display:flex;align-items:center;justify-content:center;color:white;font-size:16px;"><i
+                  class="fab fa-weixin"></i></a>
+              <a href="https://x.com/harunra15855182" target="_blank"
+                style="width:42px;height:42px;border-radius:10px;background:#000;display:flex;align-items:center;justify-content:center;color:white;font-size:16px;"><i
+                  class="fab fa-x-twitter"></i></a>
+              <a href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA" target="_blank"
+                style="width:42px;height:42px;border-radius:10px;background:#ff0000;display:flex;align-items:center;justify-content:center;color:white;font-size:16px;"><i
+                  class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="wh-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="fb-logo"><img src="images/logo white@4x.png" alt="WH Doctors Study Lab" /></div>
+        <p>WH Doctors Study Lab Ltd. — Your trusted gateway to global education.</p>
+        <div class="footer-socials"><a href="https://www.facebook.com/harun.rashid.56884761" target="_blank"><i
+              class="fab fa-facebook-f"></i></a><a href="https://wa.me/60195686867" target="_blank"><i
+              class="fab fa-whatsapp"></i></a><a href="https://web.wechat.com/uklccp" target="_blank"><i
+              class="fab fa-weixin"></i></a><a href="https://x.com/harunra15855182" target="_blank"><i
+              class="fab fa-x-twitter"></i></a><a href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA"
+            target="_blank"><i class="fab fa-youtube"></i></a></div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="study-abroad.html">Study Abroad</a></li>
+          <li><a href="blog.html">Blog & News</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Study Destinations</h4>
+        <ul>
+          <li><a href="study-abroad.html">🇲🇾 Malaysia</a></li>
+          <li><a href="study-abroad.html">🇬🇧 United Kingdom</a></li>
+          <li><a href="study-abroad.html">🇺🇸 USA</a></li>
+          <li><a href="study-abroad.html">🇨🇦 Canada</a></li>
+          <li><a href="study-abroad.html">🇦🇺 Australia</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><a href="tel:+60195686867"><i class="fas fa-phone" style="color:#F39C12;margin-right:6px;"></i>+60 19-568
+              6867</a></li>
+          <li><a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"
+                style="color:#F39C12;margin-right:6px;"></i>harun.sh96@gmail.com</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt" style="color:#F39C12;margin-right:6px;"></i>Uttara, Dhaka,
+              Bangladesh</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 WH Doctors Study Lab Ltd. All rights reserved. | Designed by Ashik</p>
+    </div>
+  </footer>
+  <a href="https://wa.me/60195686867" target="_blank" class="float-wa"><i class="fab fa-whatsapp"></i></a>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('button');
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+        btn.style.background = 'linear-gradient(135deg,#27AE60,#229954)';
+      }, 1500);
+    });
+  </script>
+</body>
+
+</html>

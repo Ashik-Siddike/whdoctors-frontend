@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Abroad - WH Doctors Study Lab Ltd.</title>
+  <meta name="description"
+    content="Explore study abroad destinations — Malaysia, UK, USA, Canada, Australia. WH Doctors guides you to the best universities worldwide." />
+  <link rel="icon" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800;900&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/home-redesign.css" />
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      padding: 100px 20px 60px;
+      text-align: center;
+      color: white;
+    }
+
+    .page-hero h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .page-hero p {
+      font-size: 1.05rem;
+      opacity: .85;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .sec {
+      padding: 70px 20px 100px;
+      background: #f8f9fa;
+    }
+
+    .con {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .sh {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .sh h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.7rem, 4vw, 2.3rem);
+      font-weight: 900;
+      color: #2C3E50;
+    }
+
+    .sh .bar {
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(135deg, #F39C12, #E74C3C);
+      border-radius: 2px;
+      margin: 14px auto 0;
+    }
+
+    .sh p {
+      color: #727272;
+      margin-top: 14px;
+    }
+
+    /* Country tabs */
+    .country-tabs {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .ctab {
+      padding: 10px 22px;
+      border-radius: 50px;
+      border: 2px solid #e0e0e0;
+      background: #fff;
+      font-family: 'Sora', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      cursor: pointer;
+      transition: all .2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .ctab.active,
+    .ctab:hover {
+      border-color: #F39C12;
+      background: linear-gradient(135deg, #F39C12, #E74C3C);
+      color: white;
+    }
+
+    /* Destination Cards */
+    .dest-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+    }
+
+    .dest-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
+      transition: transform .3s, box-shadow .3s;
+    }
+
+    .dest-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, .13);
+    }
+
+    .dest-banner {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px;
+    }
+
+    .dest-flag {
+      font-size: 80px;
+      line-height: 1;
+    }
+
+    .dest-banner-text {
+      text-align: right;
+      color: white;
+    }
+
+    .dest-banner-text h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+    }
+
+    .dest-banner-text span {
+      font-size: .85rem;
+      opacity: .85;
+    }
+
+    .dest-body {
+      padding: 24px;
+    }
+
+    .dest-body p {
+      color: #727272;
+      font-size: .88rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .dest-facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .fact {
+      background: #f8f9fa;
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    .fact .fl {
+      font-size: .75rem;
+      color: #aaa;
+      margin-bottom: 2px;
+    }
+
+    .fact .fv {
+      font-size: .88rem;
+      font-weight: 700;
+      color: #2C3E50;
+    }
+
+    .dest-card a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #F39C12, #E74C3C);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: .88rem;
+      text-decoration: none;
+      transition: transform .2s;
+    }
+
+    .dest-card a:hover {
+      transform: scale(1.04);
+    }
+
+    /* Featured Universities */
+    .uni-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .uni-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 3px 14px rgba(0, 0, 0, .06);
+      text-align: center;
+      transition: transform .2s;
+    }
+
+    .uni-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .uni-flag {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .uni-card h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: .9rem;
+      font-weight: 800;
+      color: #2C3E50;
+      margin-bottom: 4px;
+    }
+
+    .uni-card span {
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    /* Apply CTA */
+    .apply-cta {
+      background: linear-gradient(135deg, #0f2027, #2c5364);
+      border-radius: 24px;
+      padding: 60px 30px;
+      text-align: center;
+      color: white;
+      margin-top: 70px;
+    }
+
+    .apply-cta h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .apply-cta p {
+      opacity: .85;
+      max-width: 500px;
+      margin: 0 auto 28px;
+    }
+
+    .apply-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .apply-btns a {
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: .95rem;
+      text-decoration: none;
+      transition: transform .2s;
+    }
+
+    .apply-btns .bw {
+      background: white;
+      color: #0f2027;
+    }
+
+    .apply-btns .bo {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .apply-btns a:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wh-topbar">
+    <div class="wh-topbar-inner">
+      <div class="wh-topbar-left">
+        <span><i class="fas fa-map-marker-alt"></i> House 44, Road 11, Sector 13, Uttara, Dhaka-1230</span>
+        <a href="tel:+60195686867"><i class="fas fa-phone"></i> +60 19-568 6867</a>
+        <a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"></i> harun.sh96@gmail.com</a>
+      </div>
+      <div class="wh-topbar-right">
+        <a href="https://www.facebook.com/harun.rashid.56884761" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://web.wechat.com/uklccp" target="_blank"><i class="fab fa-weixin"></i></a>
+        <a href="https://wa.me/60195686867" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://x.com/harunra15855182" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA" target="_blank"><i
+            class="fab fa-youtube"></i></a>
+        <div class="wh-topbar-cta">
+          <a href="appointment.html" class="btn-top-outline"><i class="fas fa-calendar-check"></i> Book Session</a>
+          <a href="contact.html" class="btn-top-primary"><i class="fas fa-paper-plane"></i> Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="wh-bottom-nav" id="bottomNav">
+    <a href="index.html" class="bottom-nav-link"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="about.html" class="bottom-nav-link"><i class="fas fa-info-circle"></i><span>About</span></a>
+    <a href="study-abroad.html" class="bottom-nav-link active"><i class="fas fa-graduation-cap"></i><span>Study
+        Abroad</span></a>
+    <a href="index.html" class="bottom-nav-logo">
+      <div class="bnl-img-wrap"><img src="images/wh logo@4x-600w.png" alt="WH Doctors" /></div>
+    </a>
+    <a href="services.html" class="bottom-nav-link"><i class="fas fa-cogs"></i><span>Services</span></a>
+    <a href="conference.html" class="bottom-nav-link"><i
+        class="fas fa-chalkboard-teacher"></i><span>Conference</span></a>
+    <a href="contact.html" class="bottom-nav-link"><i class="fas fa-envelope"></i><span>Contact</span></a>
+  </nav>
+
+  <div class="page-hero">
+    <h1>🌍 Study Abroad Destinations</h1>
+    <p>Choose from 200+ partner universities across Malaysia, UK, USA, Canada, and Australia — with FREE expert guidance
+      from WH Doctors.</p>
+  </div>
+
+  <section class="sec">
+    <div class="con">
+
+      <div class="sh">
+        <h2>Top Study Destinations</h2>
+        <div class="bar"></div>
+        <p>Explore our most popular countries — each with world-class universities and great student life</p>
+      </div>
+
+      <div class="dest-grid">
+        <!-- Malaysia -->
+        <div class="dest-card">
+          <div class="dest-banner" style="background:linear-gradient(135deg,#cc0001,#1a1a6b);">
+            <div class="dest-flag">🇲🇾</div>
+            <div class="dest-banner-text">
+              <h3>Malaysia</h3><span>Most Affordable Option</span>
+            </div>
+          </div>
+          <div class="dest-body">
+            <p>Malaysia is a top choice for international students with affordable tuition, world-class universities,
+              and excellent quality of life. Halal food is widely available and the Muslim-friendly environment is a
+              huge advantage.</p>
+            <div class="dest-facts">
+              <div class="fact">
+                <div class="fl">Tuition/Year</div>
+                <div class="fv">RM 15,000–60,000</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Living Cost</div>
+                <div class="fv">RM 1,500–2,500/mo</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Top University</div>
+                <div class="fv">UKM, UPM, UTM, UM</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Study Language</div>
+                <div class="fv">English</div>
+              </div>
+            </div>
+            <a href="contact.html">Apply Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- UK -->
+        <div class="dest-card">
+          <div class="dest-banner" style="background:linear-gradient(135deg,#00247d,#cf142b);">
+            <div class="dest-flag">🇬🇧</div>
+            <div class="dest-banner-text">
+              <h3>United Kingdom</h3><span>Prestigious Degrees</span>
+            </div>
+          </div>
+          <div class="dest-body">
+            <p>The UK is home to some of the world's most prestigious universities. A UK degree is globally recognized
+              and can open doors to career opportunities in top multinational companies worldwide.</p>
+            <div class="dest-facts">
+              <div class="fact">
+                <div class="fl">Tuition/Year</div>
+                <div class="fv">£10,000–38,000</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Living Cost</div>
+                <div class="fv">£800–1,200/mo</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Top University</div>
+                <div class="fv">Oxford, UCL, Imperial</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Duration</div>
+                <div class="fv">3 years BSc, 1 yr MSc</div>
+              </div>
+            </div>
+            <a href="contact.html">Apply Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- USA -->
+        <div class="dest-card">
+          <div class="dest-banner" style="background:linear-gradient(135deg,#002868,#bf0a30);">
+            <div class="dest-flag">🇺🇸</div>
+            <div class="dest-banner-text">
+              <h3>United States</h3><span>World's Best Research</span>
+            </div>
+          </div>
+          <div class="dest-body">
+            <p>The USA hosts more top-ranked universities than any other country. With diverse programs, cutting-edge
+              research, and OPT work authorization, US degrees offer exceptional value for career growth.</p>
+            <div class="dest-facts">
+              <div class="fact">
+                <div class="fl">Tuition/Year</div>
+                <div class="fv">$20,000–55,000</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Living Cost</div>
+                <div class="fv">$800–1,500/mo</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Top University</div>
+                <div class="fv">MIT, Harvard, Stanford</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Work Rights</div>
+                <div class="fv">OPT (up to 3 years)</div>
+              </div>
+            </div>
+            <a href="contact.html">Apply Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Canada -->
+        <div class="dest-card">
+          <div class="dest-banner" style="background:linear-gradient(135deg,#ff0000,#ffffff20);">
+            <div class="dest-flag">🇨🇦</div>
+            <div class="dest-banner-text">
+              <h3>Canada</h3><span>Best for PR Pathway</span>
+            </div>
+          </div>
+          <div class="dest-body">
+            <p>Canada is one of the most welcoming countries for international students, offering quality education,
+              post-study work permits, and a clear pathway to permanent residency (PR).</p>
+            <div class="dest-facts">
+              <div class="fact">
+                <div class="fl">Tuition/Year</div>
+                <div class="fv">CAD 15,000–35,000</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Living Cost</div>
+                <div class="fv">CAD 800–1,500/mo</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Top University</div>
+                <div class="fv">UBC, U of Toronto</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Work Rights</div>
+                <div class="fv">PGWP (up to 3 yrs)</div>
+              </div>
+            </div>
+            <a href="contact.html">Apply Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Australia -->
+        <div class="dest-card">
+          <div class="dest-banner" style="background:linear-gradient(135deg,#00008b,#ff0000);">
+            <div class="dest-flag">🇦🇺</div>
+            <div class="dest-banner-text">
+              <h3>Australia</h3><span>Quality Life & Study</span>
+            </div>
+          </div>
+          <div class="dest-body">
+            <p>Australia offers world-class education in a beautiful environment with strong work rights for students.
+              Post-study visa options allow graduates to work for 2–6 years after completing their degree.</p>
+            <div class="dest-facts">
+              <div class="fact">
+                <div class="fl">Tuition/Year</div>
+                <div class="fv">AUD 20,000–45,000</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Living Cost</div>
+                <div class="fv">AUD 1,400–2,500/mo</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Top University</div>
+                <div class="fv">ANU, U of Melbourne</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Work Rights</div>
+                <div class="fv">40 hrs/2 weeks (on-campus)</div>
+              </div>
+            </div>
+            <a href="contact.html">Apply Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Europe -->
+        <div class="dest-card">
+          <div class="dest-banner" style="background:linear-gradient(135deg,#003399,#ffcc00);">
+            <div class="dest-flag">🇪🇺</div>
+            <div class="dest-banner-text">
+              <h3>Europe</h3><span>Low-Cost Options</span>
+            </div>
+          </div>
+          <div class="dest-body">
+            <p>Many European countries offer tuition-free or very low-cost education in English. Germany, Netherlands,
+              Sweden, and others have world-class universities with minimal tuition for international students.</p>
+            <div class="dest-facts">
+              <div class="fact">
+                <div class="fl">Tuition/Year</div>
+                <div class="fv">€0–15,000</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Living Cost</div>
+                <div class="fv">€600–1,200/mo</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Top Countries</div>
+                <div class="fv">Germany, Netherlands</div>
+              </div>
+              <div class="fact">
+                <div class="fl">Language</div>
+                <div class="fv">English programs available</div>
+              </div>
+            </div>
+            <a href="contact.html">Apply Now <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Top Universities -->
+      <div class="sh" style="margin-top:70px;">
+        <h2>Our Partner Universities</h2>
+        <div class="bar"></div>
+        <p>200+ world-class institutions we work with directly</p>
+      </div>
+      <div class="uni-grid">
+        <div class="uni-card">
+          <div class="uni-flag">🇲🇾</div>
+          <h4>UKM</h4><span>Malaysia</span>
+        </div>
+        <div class="uni-card">
+          <div class="uni-flag">🇲🇾</div>
+          <h4>UPM</h4><span>Malaysia</span>
+        </div>
+        <div class="uni-card">
+          <div class="uni-flag">🇲🇾</div>
+          <h4>UTM</h4><span>Malaysia</span>
+        </div>
+        <div class="uni-card">
+          <div class="uni-flag">🇲🇾</div>
+          <h4>Universiti Malaya</h4><span>Malaysia</span>
+        </div>
+        <div class="uni-card">
+          <div class="uni-flag">🇲🇾</div>
+          <h4>Taylor's University</h4><span>Malaysia</span>
+        </div>
+        <div class="uni-card">
+          <div class="uni-flag">🇬🇧</div>
+          <h4>University of London</h4><span>United Kingdom</span>
+        </div>
+        <div class="uni-card">
+          <div class="uni-flag">🇬🇧</div>
+          <h4>Coventry University</h4><span>United Kingdom</span>
+        </div>
+        <div class="uni-card">
+          <div class="uni-flag">🇺🇸</div>
+          <h4>State Universities</h4><span>USA</span>
+        </div>
+        <div class="uni-card">
+          <div class="uni-flag">🇨🇦</div>
+          <h4>UBC / U of Toronto</h4><span>Canada</span>
+        </div>
+        <div class="uni-card">
+          <div class="uni-flag">🇦🇺</div>
+          <h4>Deakin University</h4><span>Australia</span>
+        </div>
+        <div class="uni-card">
+          <div class="uni-flag">🇦🇺</div>
+          <h4>La Trobe University</h4><span>Australia</span>
+        </div>
+        <div class="uni-card">
+          <div class="uni-flag">🌍</div>
+          <h4>200+ More</h4><span>Worldwide</span>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="apply-cta">
+        <h2>Ready to Choose Your Destination?</h2>
+        <p>Book a FREE consultation and we'll help you find the perfect university in your dream country.</p>
+        <div class="apply-btns">
+          <a href="contact.html" class="bw">📞 Book Free Consultation</a>
+          <a href="services.html" class="bo">🎓 View Our Services</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="wh-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="fb-logo"><img src="images/logo white@4x.png" alt="WH Doctors Study Lab" /></div>
+        <p>WH Doctors Study Lab Ltd. — Your trusted gateway to global education.</p>
+        <div class="footer-socials"><a href="https://www.facebook.com/harun.rashid.56884761" target="_blank"><i
+              class="fab fa-facebook-f"></i></a><a href="https://wa.me/60195686867" target="_blank"><i
+              class="fab fa-whatsapp"></i></a><a href="https://web.wechat.com/uklccp" target="_blank"><i
+              class="fab fa-weixin"></i></a><a href="https://x.com/harunra15855182" target="_blank"><i
+              class="fab fa-x-twitter"></i></a><a href="https://www.youtube.com/channel/UCiIW3cM51ITTt6015ZC4HBA"
+            target="_blank"><i class="fab fa-youtube"></i></a></div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="study-abroad.html">Study Abroad</a></li>
+          <li><a href="blog.html">Blog & News</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Study Destinations</h4>
+        <ul>
+          <li><a href="study-abroad.html">🇲🇾 Malaysia</a></li>
+          <li><a href="study-abroad.html">🇬🇧 United Kingdom</a></li>
+          <li><a href="study-abroad.html">🇺🇸 USA</a></li>
+          <li><a href="study-abroad.html">🇨🇦 Canada</a></li>
+          <li><a href="study-abroad.html">🇦🇺 Australia</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><a href="tel:+60195686867"><i class="fas fa-phone" style="color:#F39C12;margin-right:6px;"></i>+60 19-568
+              6867</a></li>
+          <li><a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"
+                style="color:#F39C12;margin-right:6px;"></i>harun.sh96@gmail.com</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt" style="color:#F39C12;margin-right:6px;"></i>Uttara, Dhaka,
+              Bangladesh</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 WH Doctors Study Lab Ltd. All rights reserved. | Designed by Ashik</p>
+    </div>
+  </footer>
+  <a href="https://wa.me/60195686867" target="_blank" class="float-wa"><i class="fab fa-whatsapp"></i></a>
+</body>
+
+</html>

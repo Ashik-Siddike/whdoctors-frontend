@@ -1,0 +1,15 @@
+.animated-background-2-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+}
+.animated-background-2-pasted-image {
+  width: 100%;
+  height: auto;
+  rotate: 180deg;
+}
+.animated-background-2-root-class-name {
+  height: auto;
+  opacity: 0.3;
+}
