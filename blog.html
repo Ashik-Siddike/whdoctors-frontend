@@ -8,7 +8,7 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: { orange: '#F39C12', red: '#E74C3C', blue: '#5DADE2', dark: '#2C3E50', text: '#34495E' }
+                        brand: { orange: '#FF6B00', red: '#FF8C00', blue: '#5DADE2', dark: '#2C3E50', text: '#34495E' }
                     },
                     fontFamily: { sora: ['Sora', 'sans-serif'], inter: ['Inter', 'sans-serif'] }
                 }
@@ -32,10 +32,10 @@
     <style>
         /* Page Hero */
         .page-hero {
-            background: linear-gradient(135deg, #2C3E50 0%, #E74C3C 100%);
+            background: var(--theme-gradient);
             padding: 100px 20px 60px;
             text-align: center;
-            color: white;
+            color: #2C3E50;
             margin-bottom: 0;
         }
 
@@ -98,7 +98,7 @@
         .blog-card-img-placeholder {
             width: 100%;
             height: 220px;
-            background: linear-gradient(135deg, #F39C12, #E74C3C);
+            background: var(--theme-gradient);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -111,7 +111,7 @@
 
         .blog-card-date {
             font-size: 12px;
-            color: #F39C12;
+            color: #FF6B00;
             font-weight: 600;
             margin-bottom: 10px;
             text-transform: uppercase;
@@ -140,7 +140,7 @@
             margin-top: 16px;
             font-size: 0.9rem;
             font-weight: 700;
-            color: #E74C3C;
+            color: #FF8C00;
         }
 
         .blog-card-read i {
@@ -167,7 +167,7 @@
         .section-heading .underline-bar {
             width: 60px;
             height: 4px;
-            background: linear-gradient(135deg, #F39C12, #E74C3C);
+            background: var(--theme-gradient);
             border-radius: 2px;
             margin: 14px auto 0;
         }
@@ -253,7 +253,7 @@
             <div class="blog-grid">
                 <!-- Sample Blog Cards (Static - Updated from live site content) -->
                 <a href="blog-details.html" class="blog-card">
-                    <div class="blog-card-img-placeholder">📚</div>
+                    <img class="blog-card-img" src="images/blog/20251213130854.jpeg" alt="Blog Image" onerror="this.src='https://placehold.co/600x400/eeeeee/aaaaaa?text=Image'">
                     <div class="blog-card-body">
                         <div class="blog-card-date"><i class="fas fa-calendar-alt"></i> March 2024</div>
                         <h2 class="blog-card-title">How to Study in Malaysia: Complete Guide for International Students
@@ -265,7 +265,7 @@
                 </a>
 
                 <a href="blog-details.html" class="blog-card">
-                    <div class="blog-card-img-placeholder">🎓</div>
+                    <img class="blog-card-img" src="images/blog/20250208064549.jpeg" alt="Blog Image" onerror="this.src='https://placehold.co/600x400/eeeeee/aaaaaa?text=Image'">
                     <div class="blog-card-body">
                         <div class="blog-card-date"><i class="fas fa-calendar-alt"></i> February 2024</div>
                         <h2 class="blog-card-title">Top Scholarships for Bangladeshi Students in 2024</h2>
@@ -276,7 +276,7 @@
                 </a>
 
                 <a href="blog-details.html" class="blog-card">
-                    <div class="blog-card-img-placeholder">✈️</div>
+                    <img class="blog-card-img" src="images/blog/20250208064524.jpg" alt="Blog Image" onerror="this.src='https://placehold.co/600x400/eeeeee/aaaaaa?text=Image'">
                     <div class="blog-card-body">
                         <div class="blog-card-date"><i class="fas fa-calendar-alt"></i> January 2024</div>
                         <h2 class="blog-card-title">Student Visa Tips: How to Get 95% Visa Approval Rate</h2>
@@ -287,7 +287,7 @@
                 </a>
 
                 <a href="blog-details.html" class="blog-card">
-                    <div class="blog-card-img-placeholder">🏫</div>
+                    <img class="blog-card-img" src="images/blog/20250201171503.jpg" alt="Blog Image" onerror="this.src='https://placehold.co/600x400/eeeeee/aaaaaa?text=Image'">
                     <div class="blog-card-body">
                         <div class="blog-card-date"><i class="fas fa-calendar-alt"></i> December 2023</div>
                         <h2 class="blog-card-title">PhD Research Opportunities in Top Universities — 2024 Update</h2>
@@ -298,7 +298,7 @@
                 </a>
 
                 <a href="blog-details.html" class="blog-card">
-                    <div class="blog-card-img-placeholder">🌍</div>
+                    <img class="blog-card-img" src="images/blog/20250201171522.png" alt="Blog Image" onerror="this.src='https://placehold.co/600x400/eeeeee/aaaaaa?text=Image'">
                     <div class="blog-card-body">
                         <div class="blog-card-date"><i class="fas fa-calendar-alt"></i> November 2023</div>
                         <h2 class="blog-card-title">Cost of Living Abroad: Malaysia vs UK vs Canada Compared</h2>
@@ -309,7 +309,7 @@
                 </a>
 
                 <a href="blog-details.html" class="blog-card">
-                    <div class="blog-card-img-placeholder">🇬🇧</div>
+                    <img class="blog-card-img" src="images/blog/20231213075812.png" alt="Blog Image" onerror="this.src='https://placehold.co/600x400/eeeeee/aaaaaa?text=Image'">
                     <div class="blog-card-body">
                         <div class="blog-card-date"><i class="fas fa-calendar-alt"></i> October 2023</div>
                         <h2 class="blog-card-title">Studying in the UK: Requirements, Costs, and Application Process
@@ -368,13 +368,13 @@
                 <h4>Contact Us</h4>
                 <ul>
                     <li><a href="tel:+60195686867"><i class="fas fa-phone"
-                                style="color:#F39C12; margin-right:6px;"></i>+60 19-568 6867</a></li>
+                                style="color:#FF6B00; margin-right:6px;"></i>+60 19-568 6867</a></li>
                     <li><a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"
-                                style="color:#F39C12; margin-right:6px;"></i>harun.sh96@gmail.com</a></li>
+                                style="color:#FF6B00; margin-right:6px;"></i>harun.sh96@gmail.com</a></li>
                     <li><a href="#"><i class="fas fa-map-marker-alt"
-                                style="color:#F39C12; margin-right:6px;"></i>Uttara, Dhaka, Bangladesh</a></li>
+                                style="color:#FF6B00; margin-right:6px;"></i>Uttara, Dhaka, Bangladesh</a></li>
                     <li><a href="#"><i class="fas fa-map-marker-alt"
-                                style="color:#F39C12; margin-right:6px;"></i>Serdang, Selangor, Malaysia</a></li>
+                                style="color:#FF6B00; margin-right:6px;"></i>Serdang, Selangor, Malaysia</a></li>
                 </ul>
             </div>
         </div>
@@ -406,3 +406,6 @@
 </body>
 
 </html>
+
+
+

@@ -8,7 +8,7 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: { orange: '#F39C12', red: '#E74C3C', blue: '#5DADE2', dark: '#2C3E50', text: '#34495E' }
+                        brand: { orange: '#FF6B00', red: '#FF8C00', blue: '#5DADE2', dark: '#2C3E50', text: '#34495E' }
                     },
                     fontFamily: { sora: ['Sora', 'sans-serif'], inter: ['Inter', 'sans-serif'] }
                 }
@@ -31,10 +31,10 @@
     <link rel="stylesheet" href="css/home-redesign.css" />
     <style>
         .page-hero {
-            background: linear-gradient(135deg, #2C3E50 0%, #E74C3C 100%);
+            background: var(--theme-gradient);
             padding: 100px 20px 60px;
             text-align: center;
-            color: white;
+            color: #2C3E50;
         }
 
         .page-hero h1 {
@@ -144,7 +144,7 @@
         }
 
         .blog-meta .tag {
-            background: linear-gradient(135deg, #F39C12, #E74C3C);
+            background: var(--theme-gradient);
             color: #fff;
             padding: 4px 12px;
             border-radius: 50px;
@@ -156,7 +156,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: #E74C3C;
+            color: #FF8C00;
             font-weight: 700;
             text-decoration: none;
             margin-bottom: 28px;
@@ -209,7 +209,7 @@
             width: 44px;
             height: 44px;
             border-radius: 10px;
-            background: linear-gradient(135deg, #F39C12, #E74C3C);
+            background: var(--theme-gradient);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -232,12 +232,12 @@
         }
 
         .latest-blog-item:hover .lbi-text h5 {
-            color: #E74C3C;
+            color: #FF8C00;
         }
 
         /* CTA Sidebar */
         .cta-sidebar {
-            background: linear-gradient(135deg, #2C3E50, #E74C3C);
+            background: var(--theme-gradient);
             border-radius: 16px;
             padding: 28px;
             color: white;
@@ -260,7 +260,7 @@
         .cta-sidebar a {
             display: block;
             background: white;
-            color: #E74C3C;
+            color: #FF8C00;
             padding: 12px 20px;
             border-radius: 50px;
             font-weight: 800;
@@ -469,11 +469,11 @@
                     <p style="color:#555; font-size:0.9rem; margin-bottom:14px;">Ready to start your abroad journey? Get
                         in touch with our expert counsellors.</p>
                     <p style="color:#555; font-size:0.88rem; margin-bottom:6px;"><i class="fas fa-phone"
-                            style="color:#F39C12;margin-right:6px;"></i> +60 19-568 6867</p>
+                            style="color:#FF6B00;margin-right:6px;"></i> +60 19-568 6867</p>
                     <p style="color:#555; font-size:0.88rem; margin-bottom:6px;"><i class="fas fa-envelope"
-                            style="color:#F39C12;margin-right:6px;"></i> harun.sh96@gmail.com</p>
+                            style="color:#FF6B00;margin-right:6px;"></i> harun.sh96@gmail.com</p>
                     <p style="color:#555; font-size:0.88rem;"><i class="fas fa-clock"
-                            style="color:#F39C12;margin-right:6px;"></i> 10 AM – 6 PM (Working Days)</p>
+                            style="color:#FF6B00;margin-right:6px;"></i> 10 AM – 6 PM (Working Days)</p>
                 </div>
 
             </aside>
@@ -525,13 +525,13 @@
                 <h4>Contact Us</h4>
                 <ul>
                     <li><a href="tel:+60195686867"><i class="fas fa-phone"
-                                style="color:#F39C12; margin-right:6px;"></i>+60 19-568 6867</a></li>
+                                style="color:#FF6B00; margin-right:6px;"></i>+60 19-568 6867</a></li>
                     <li><a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"
-                                style="color:#F39C12; margin-right:6px;"></i>harun.sh96@gmail.com</a></li>
+                                style="color:#FF6B00; margin-right:6px;"></i>harun.sh96@gmail.com</a></li>
                     <li><a href="#"><i class="fas fa-map-marker-alt"
-                                style="color:#F39C12; margin-right:6px;"></i>Uttara, Dhaka, Bangladesh</a></li>
+                                style="color:#FF6B00; margin-right:6px;"></i>Uttara, Dhaka, Bangladesh</a></li>
                     <li><a href="#"><i class="fas fa-map-marker-alt"
-                                style="color:#F39C12; margin-right:6px;"></i>Serdang, Selangor, Malaysia</a></li>
+                                style="color:#FF6B00; margin-right:6px;"></i>Serdang, Selangor, Malaysia</a></li>
                 </ul>
             </div>
         </div>
@@ -548,3 +548,6 @@
 </body>
 
 </html>
+
+
+

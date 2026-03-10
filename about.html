@@ -7,7 +7,7 @@
     tailwind.config = {
       theme: {
         extend: {
-          colors: { brand: { orange: '#F39C12', red: '#E74C3C', dark: '#2C3E50' } },
+          colors: { brand: { orange: '#FF6B00', red: '#FF8C00', dark: '#2C3E50' } },
           fontFamily: { sora: ['Sora', 'sans-serif'], inter: ['Inter', 'sans-serif'] }
         }
       }
@@ -29,10 +29,10 @@
   <link rel="stylesheet" href="css/home-redesign.css" />
   <style>
     .page-hero {
-      background: linear-gradient(135deg, #2C3E50 0%, #E74C3C 100%);
+      background: var(--theme-gradient);
       padding: 100px 20px 60px;
       text-align: center;
-      color: white;
+      color: #2C3E50;
     }
 
     .page-hero h1 {
@@ -74,7 +74,7 @@
     .sec-head .bar {
       width: 60px;
       height: 4px;
-      background: linear-gradient(135deg, #F39C12, #E74C3C);
+      background: var(--theme-gradient);
       border-radius: 2px;
       margin: 14px auto 0;
     }
@@ -178,8 +178,8 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, #F39C12, #E74C3C);
-      color: white;
+      background: var(--theme-gradient);
+      color: #2C3E50;
       padding: 8px 18px;
       border-radius: 50px;
       font-size: 0.85rem;
@@ -192,7 +192,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 24px;
-      background: linear-gradient(135deg, #2C3E50, #E74C3C);
+      background: var(--theme-gradient);
       border-radius: 20px;
       padding: 40px;
       margin-bottom: 70px;
@@ -200,7 +200,7 @@
 
     .stat-item {
       text-align: center;
-      color: white;
+      color: #2C3E50;
     }
 
     .stat-item .num {
@@ -214,6 +214,7 @@
       font-size: 0.9rem;
       opacity: 0.85;
       margin-top: 6px;
+      font-weight: 600;
     }
 
     /* Team */
@@ -240,12 +241,12 @@
       width: 100%;
       height: 220px;
       object-fit: cover;
-      background: linear-gradient(135deg, #F39C12, #E74C3C);
+      background: var(--theme-gradient);
     }
 
     .team-photo-placeholder {
       height: 220px;
-      background: linear-gradient(135deg, #F39C12, #E74C3C);
+      background: var(--theme-gradient);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -266,7 +267,7 @@
 
     .team-info span {
       font-size: 0.85rem;
-      color: #F39C12;
+      color: #FF6B00;
       font-weight: 600;
     }
 
@@ -297,7 +298,7 @@
       width: 48px;
       height: 48px;
       border-radius: 12px;
-      background: linear-gradient(135deg, #F39C12, #E74C3C);
+      background: var(--theme-gradient);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -376,20 +377,13 @@
       <!-- Intro -->
       <div class="about-intro">
         <div class="about-intro-img">
-          <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80"
-            alt="WH Doctors Team" onerror="this.src='uploads/1745679712.jpg'" />
+          <img src="uploads/1745679712.jpg" alt="WH Doctors Study Lab" />
         </div>
         <div class="about-intro-text">
           <div class="about-badge"><i class="fas fa-star"></i> Trusted Since 2015</div>
-          <h2>We Help Students Achieve Their Global Education Dreams</h2>
-          <p>WH Doctors Study Lab Ltd. is a premier overseas education consultancy headquartered in Dhaka, Bangladesh
-            with a branch in Serdang, Selangor, Malaysia. We specialize in guiding students from Bangladesh and beyond
-            to pursue higher education at world-renowned universities.</p>
-          <p>Our team of experienced education counsellors provides <strong>100% FREE consultancy</strong>, helping
-            students with university selection, applications, scholarship guidance, visa assistance, and pre-departure
-            preparation.</p>
-          <p>With over <strong>200+ partner universities</strong> across Malaysia, UK, USA, Canada, and Australia, we
-            have successfully placed <strong>5,000+ students</strong> in their dream institutions.</p>
+          <h2>W H Doctors Study Lab Ltd.</h2>
+          <p>We help you to study in Abroad.</p>
+          <p>Study Abroad also has a well-organised platform in Bangladesh for student training for the preparation of IELTS and other relevant English language tests. We have liaison branches all over Bangladesh. No other educational training institute in Bangladesh has either such a vast network or student access as we do. This exclusive student base we currently have possesses great potential for overseas student recruitment. Our various services are comprehensive and tailored to suit students' needs and budgets. All of our services aim to provide a student with personalised advice and information to help avoid unnecessary expenses until we are confident that a visa application by a student recruited by us has the best possible chance of success.</p>
         </div>
       </div>
 
@@ -428,7 +422,7 @@
       </div>
       <div class="mv-grid">
         <div class="mv-card">
-          <div class="mv-icon" style="background: linear-gradient(135deg,#F39C12,#E74C3C);color:white;"><i
+          <div class="mv-icon" style="background: var(--theme-gradient);color:#2C3E50;"><i
               class="fas fa-bullseye"></i></div>
           <h3>Our Mission</h3>
           <p>To democratize access to world-class education by providing free, expert guidance to every student who
@@ -513,31 +507,31 @@
       </div>
       <div class="team-grid">
         <div class="team-card">
-          <div class="team-photo-placeholder">👨‍💼</div>
+          <img class="team-photo" src="images/user-image/20240220170716.jpg" alt="Md Harun Rashid">
           <div class="team-info">
-            <h4>Dr. Harun Ur Rashid</h4>
-            <span>Founder & Chief Counsellor</span>
+            <h4>Md Harun Rashid</h4>
+            <span>Managing Director</span>
           </div>
         </div>
         <div class="team-card">
-          <div class="team-photo-placeholder">👩‍💼</div>
+          <img class="team-photo" src="images/user-image/20231119063309.jpg" alt="MR. JHON">
           <div class="team-info">
-            <h4>Visa & Admission Team</h4>
-            <span>Senior Application Specialists</span>
+            <h4>MR. JHON</h4>
+            <span>Chairman</span>
           </div>
         </div>
         <div class="team-card">
-          <div class="team-photo-placeholder">👨‍🏫</div>
+          <img class="team-photo" src="images/user-image/20240220172715.jpg" alt="Aminul Islam">
           <div class="team-info">
-            <h4>PhD Research Mentors</h4>
-            <span>Research & Academic Advisors</span>
+            <h4>Aminul Islam</h4>
+            <span>Country Director</span>
           </div>
         </div>
         <div class="team-card">
-          <div class="team-photo-placeholder">🌍</div>
+          <img class="team-photo" src="images/user-image/20240303164932.jpg" alt="WEI Li">
           <div class="team-info">
-            <h4>Country Specialists</h4>
-            <span>Destination Expert Advisors</span>
+            <h4>WEI Li</h4>
+            <span>Director</span>
           </div>
         </div>
       </div>
@@ -586,13 +580,13 @@
       <div class="footer-col">
         <h4>Contact Us</h4>
         <ul>
-          <li><a href="tel:+60195686867"><i class="fas fa-phone" style="color:#F39C12;margin-right:6px;"></i>+60 19-568
+          <li><a href="tel:+60195686867"><i class="fas fa-phone" style="color:#FF6B00;margin-right:6px;"></i>+60 19-568
               6867</a></li>
           <li><a href="mailto:harun.sh96@gmail.com"><i class="fas fa-envelope"
-                style="color:#F39C12;margin-right:6px;"></i>harun.sh96@gmail.com</a></li>
-          <li><a href="#"><i class="fas fa-map-marker-alt" style="color:#F39C12;margin-right:6px;"></i>Uttara, Dhaka,
+                style="color:#FF6B00;margin-right:6px;"></i>harun.sh96@gmail.com</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt" style="color:#FF6B00;margin-right:6px;"></i>Uttara, Dhaka,
               Bangladesh</a></li>
-          <li><a href="#"><i class="fas fa-map-marker-alt" style="color:#F39C12;margin-right:6px;"></i>Serdang,
+          <li><a href="#"><i class="fas fa-map-marker-alt" style="color:#FF6B00;margin-right:6px;"></i>Serdang,
               Selangor, Malaysia</a></li>
         </ul>
       </div>
@@ -608,3 +602,6 @@
 </body>
 
 </html>
+
+
+

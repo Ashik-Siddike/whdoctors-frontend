@@ -5,11 +5,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
 
+:root {
+  /* Centralized Theme System */
+  --primary-color: #FF6B00;
+  --secondary-color: #4A00E0;
+  --theme-gradient: linear-gradient(to right bottom, #ff8505, #ff9a3a, #ffad5e, #fdbf81, #fbd0a5);
+}
+
 /* ---- PREMIUM UTILITY CLASSES ---- */
 
 /* Gradient text */
 .grad-text {
-  background: linear-gradient(135deg, #F39C12, #E74C3C);
+  background: var(--theme-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -29,7 +36,7 @@
 }
 
 .animated-grad {
-  background: linear-gradient(-45deg, #F39C12, #E74C3C, #e67e22, #c0392b);
+  background: linear-gradient(-45deg, var(--primary-color), #FF8C00, #FF5500, #E55000);
   background-size: 400% 400%;
   animation: gradShift 8s ease infinite;
 }
@@ -49,7 +56,7 @@
 
 .card-lift:hover {
   transform: translateY(-12px) scale(1.015);
-  box-shadow: 0 24px 60px rgba(243, 156, 18, 0.18), 0 4px 16px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 24px 60px rgba(255, 107, 0, 0.18), 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 /* Orange pill badge */
@@ -61,9 +68,9 @@
   font-weight: 700;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: #F39C12;
-  background: rgba(243, 156, 18, 0.1);
-  border: 1px solid rgba(243, 156, 18, 0.28);
+  color: var(--primary-color);
+  background: rgba(255, 107, 0, 0.1);
+  border: 1px solid rgba(255, 107, 0, 0.28);
   padding: 5px 16px;
   border-radius: 999px;
   margin-bottom: 16px;
@@ -97,7 +104,7 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #F39C12, #E74C3C);
+  background: linear-gradient(90deg, var(--primary-color), #FF8C00);
   border-radius: 2px;
 }
 
@@ -106,7 +113,7 @@
   font-family: 'Sora', sans-serif;
   font-size: 96px;
   font-weight: 900;
-  color: rgba(243, 156, 18, 0.07);
+  color: rgba(255, 107, 0, 0.07);
   line-height: 1;
   position: absolute;
   top: -16px;
@@ -119,8 +126,8 @@
 
 /* ---- VARIABLES ---- */
 :root {
-  --orange: #F39C12;
-  --red: #E74C3C;
+  --orange: var(--primary-color);
+  --red: #FF8C00;
   --blue: #5DADE2;
   --blue-dark: #3498DB;
   --dark: #2C3E50;
@@ -128,12 +135,12 @@
   --light: #ECF0F1;
   --white: #FFFFFF;
   --green: #27AE60;
-  --grad-orange: linear-gradient(135deg, #F39C12 0%, #E74C3C 100%);
+  --grad-orange: linear-gradient(135deg, var(--primary-color) 0%, #FF8C00 100%);
   --grad-blue: linear-gradient(135deg, #5DADE2 0%, #3498DB 100%);
   --grad-green: linear-gradient(135deg, #27AE60 0%, #229954 100%);
   --shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.15);
-  --shadow-orange: 0 8px 25px rgba(243, 156, 18, 0.3);
+  --shadow-orange: 0 8px 25px rgba(255, 107, 0, 0.3);
   --radius: 20px;
   --radius-sm: 12px;
   --transition: all 0.3s ease;
@@ -171,7 +178,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1002;
-  border-bottom: 2px solid rgba(243, 156, 18, 0.3);
+  border-bottom: 2px solid rgba(255, 107, 0, 0.3);
 }
 
 .wh-topbar-inner {
@@ -266,7 +273,7 @@ body {
   background: var(--orange);
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
 }
 
 .btn-top-primary {
@@ -280,14 +287,14 @@ body {
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(243, 156, 18, 0.35);
+  box-shadow: 0 4px 14px rgba(255, 107, 0, 0.35);
   transition: var(--transition);
   white-space: nowrap;
 }
 
 .btn-top-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(243, 156, 18, 0.5);
+  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.5);
   color: #fff;
 }
 
@@ -322,9 +329,9 @@ body {
   border-radius: 50%;
   background: #fff;
   padding: 4px;
-  border: 3px solid rgba(243, 156, 18, 0.35);
+  border: 3px solid rgba(255, 107, 0, 0.35);
   box-shadow:
-    0 -4px 20px rgba(243, 156, 18, 0.28),
+    0 -4px 20px rgba(255, 107, 0, 0.28),
     0 4px 14px rgba(0, 0, 0, 0.12);
   transition: all 0.3s ease;
   overflow: hidden;
@@ -340,7 +347,7 @@ body {
 .bottom-nav-logo:hover .bnl-img-wrap {
   transform: scale(1.1) rotate(8deg);
   box-shadow:
-    0 -6px 28px rgba(243, 156, 18, 0.45),
+    0 -6px 28px rgba(255, 107, 0, 0.45),
     0 6px 20px rgba(0, 0, 0, 0.15);
   border-color: var(--orange);
 }
@@ -373,7 +380,7 @@ body {
 .nav-link:hover,
 .nav-link.active {
   color: var(--orange);
-  background: rgba(243, 156, 18, 0.06);
+  background: rgba(255, 107, 0, 0.06);
 }
 
 .nav-link:hover::after,
@@ -388,11 +395,11 @@ body {
   border-radius: 50%;
   background: var(--white);
   padding: 3px;
-  box-shadow: 0 4px 18px rgba(243, 156, 18, 0.25), 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 18px rgba(255, 107, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: var(--transition);
   overflow: hidden;
   flex-shrink: 0;
-  border: 2px solid rgba(243, 156, 18, 0.2);
+  border: 2px solid rgba(255, 107, 0, 0.2);
 }
 
 .wh-logo-img-wrap img {
@@ -452,7 +459,7 @@ body {
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 0 4px 16px rgba(243, 156, 18, 0.3);
+  box-shadow: 0 4px 16px rgba(255, 107, 0, 0.3);
   transition: var(--transition);
   position: relative;
   overflow: hidden;
@@ -461,7 +468,7 @@ body {
 
 .btn-header-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(243, 156, 18, 0.45);
+  box-shadow: 0 10px 30px rgba(255, 107, 0, 0.45);
   color: #fff;
 }
 
@@ -495,7 +502,7 @@ body {
   flex-direction: column;
   background: var(--white);
   padding: 20px 24px 24px;
-  border-top: 1px solid rgba(243, 156, 18, 0.15);
+  border-top: 1px solid rgba(255, 107, 0, 0.15);
   gap: 4px;
 }
 
@@ -513,7 +520,7 @@ body {
 .wh-mobile-menu a:hover,
 .wh-mobile-menu a.active {
   color: var(--orange);
-  background: rgba(243, 156, 18, 0.07);
+  background: rgba(255, 107, 0, 0.07);
 }
 
 .wh-mobile-menu.open {
@@ -620,7 +627,7 @@ body {
 }
 
 .uni-item:hover .uni-logo-box {
-  box-shadow: 0 12px 35px rgba(243, 156, 18, 0.25);
+  box-shadow: 0 12px 35px rgba(255, 107, 0, 0.25);
   border-color: var(--orange);
 }
 
@@ -635,7 +642,7 @@ body {
   font-size: 11px;
   color: var(--orange);
   font-weight: 600;
-  background: rgba(243, 156, 18, 0.1);
+  background: rgba(255, 107, 0, 0.1);
   padding: 3px 10px;
   border-radius: 20px;
 }
@@ -667,7 +674,7 @@ body {
   right: -15%;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(243, 156, 18, 0.12) 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.12) 0%, transparent 65%);
   border-radius: 50%;
   animation: floatAnim 18s ease-in-out infinite;
 }
@@ -679,7 +686,7 @@ body {
   left: -10%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(231, 76, 60, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 140, 0, 0.08) 0%, transparent 70%);
   border-radius: 50%;
   animation: floatAnim 22s ease-in-out infinite reverse;
 }
@@ -745,7 +752,7 @@ body {
   left: 0;
   width: 100%;
   height: 10px;
-  background: rgba(243, 156, 18, 0.18);
+  background: rgba(255, 107, 0, 0.18);
   z-index: -1;
   border-radius: 4px;
 }
@@ -799,7 +806,7 @@ body {
 
 .btn-primary-demo:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(243, 156, 18, 0.45);
+  box-shadow: 0 12px 35px rgba(255, 107, 0, 0.45);
   color: #fff;
 }
 
@@ -975,7 +982,7 @@ body {
 
 .stat-box:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(243, 156, 18, 0.15);
+  box-shadow: 0 20px 50px rgba(255, 107, 0, 0.15);
 }
 
 .stat-number {
@@ -1018,7 +1025,7 @@ body {
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--orange);
-  background: rgba(243, 156, 18, 0.1);
+  background: rgba(255, 107, 0, 0.1);
   padding: 5px 16px;
   border-radius: 20px;
   margin-bottom: 16px;
@@ -1318,7 +1325,7 @@ body {
   color: #fff;
   padding: 20px 24px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(243, 156, 18, 0.4);
+  box-shadow: 0 10px 30px rgba(255, 107, 0, 0.4);
   text-align: center;
 }
 
@@ -1525,7 +1532,7 @@ body {
 
 .why-box:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 60px rgba(243, 156, 18, 0.3);
+  box-shadow: 0 20px 60px rgba(255, 107, 0, 0.3);
 }
 
 .why-box .why-icon {
@@ -1650,7 +1657,7 @@ body {
 }
 
 .testi-stars {
-  color: #F39C12;
+  color: var(--primary-color);
   font-size: 13px;
   letter-spacing: 1px;
   margin-top: 4px;
@@ -1777,7 +1784,7 @@ body {
 
 .blog-cat {
   display: inline-block;
-  background: rgba(243, 156, 18, 0.12);
+  background: rgba(255, 107, 0, 0.12);
   color: var(--orange);
   font-size: 11px;
   font-weight: 700;
@@ -1952,7 +1959,7 @@ body {
 
 .office-card-demo:hover {
   border-color: var(--orange);
-  box-shadow: 0 20px 50px rgba(243, 156, 18, 0.12);
+  box-shadow: 0 20px 50px rgba(255, 107, 0, 0.12);
   transform: translateY(-6px);
 }
 
@@ -2394,7 +2401,7 @@ body {
   justify-content: space-around;
   padding: 0;
   height: 68px;
-  border-top: 2px solid rgba(243, 156, 18, 0.18);
+  border-top: 2px solid rgba(255, 107, 0, 0.18);
   box-shadow: 0 -6px 28px rgba(0, 0, 0, 0.12);
   overflow: visible;
   /* ← allows logo to pop above the bar */
@@ -2473,7 +2480,7 @@ body {
 
 /* Active orange background pill behind icon */
 .bottom-nav-link.active i {
-  background: rgba(243, 156, 18, 0.08);
+  background: rgba(255, 107, 0, 0.08);
   padding: 6px 10px;
   border-radius: 20px;
   margin-bottom: -2px;
@@ -2534,3 +2541,4 @@ body {
   opacity: 1 !important;
   transform: none !important;
 }
+
